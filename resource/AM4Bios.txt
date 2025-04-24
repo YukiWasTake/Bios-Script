@@ -1,0 +1,1196 @@
+// Script File Name : AM4Bios.txt
+HIICrc32=
+
+Setup Question	= Special Display Features
+Help String	= Enable/Disable          PowerXpress             HybridGraphics
+Token	=7D1	// Do NOT change this line
+Offset	=02
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [03]PowerXpress
+         [04]HybridGraphics
+
+Setup Question	= PX Dynamic Mode
+Help String	= Enable/Disable PX Dynamic Mode Switch
+Token	=03	// Do NOT change this line
+Offset	=03
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]dGPU Power Down
+         [02]PX ULPS Mode
+
+Setup Question	= Discrete GPU's Audio
+Help String	= Disable Discrete GPU's Audio or keep its ROM strap setting
+Token	=05	// Do NOT change this line
+Offset	=6F
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Keep ROM Strap Setting
+
+Setup Question	= Adaptive S4
+Help String	= Enable/Disable Adaptive S4
+Token	=06	// Do NOT change this line
+Offset	=08
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [02]Enabled
+
+Setup Question	= LAN Power Enable
+Help String	= Enable or disable LAN Power
+Token	=08	// Do NOT change this line
+Offset	=09
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= PM L1 SS
+Help String	= Enable for PM L1 SS and ASPM L1 SS
+Token	=0E	// Do NOT change this line
+Offset	=70
+Width	=01
+Options	=[FF]Auto	// Move "*" to the desired Option
+         *[00]Disabled
+         [01]L1.1
+         [02]L1.2
+         [03]L1.1_L1.2
+
+Setup Question	= Unused GPP Clocks Off
+Help String	= Turn Unused GPP Clocks Off
+Token	=0F	// Do NOT change this line
+Offset	=05
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled 
+
+Setup Question	= Clock Power Management(CLKREQ#)
+Help String	= Enable or disable CLKREQ#
+Token	=10	// Do NOT change this line
+Offset	=06
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= ACP Power Gating
+Help String	= Enable or Disable ACP Power Gating
+Token	=2F	// Do NOT change this line
+Offset	=71
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled 
+
+Setup Question	= ACP CLock Gating
+Help String	= Enable or Disable ACP CLOCK Gating
+Token	=30	// Do NOT change this line
+Offset	=72
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= ACS Enable
+Help String	= AER must be enabled for ACS enable to work
+Token	=05	// Do NOT change this line
+Offset	=14B
+Width	=01
+Options	=[01]Enable	// Move "*" to the desired Option
+         *[00]Disabled
+         [0F]Auto
+
+Setup Question	= SMEE
+Help String	= Control secure memory encryption enable
+Token	=16	// Do NOT change this line
+Offset	=234
+Width	=01
+Options	=*[00]Disable	// Move "*" to the desired Option
+         [01]Enable
+         [03]Auto
+
+Setup Question	= Global C-state Control
+Help String	= Controls IO based C-state generation and DF C-states.
+Token	=19	// Do NOT change this line
+Offset	=24
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [03]Auto
+
+Setup Question	= Power Supply Idle Control
+Help String	= Power Supply Idle Control.
+Token	=1A	// Do NOT change this line
+Offset	=25
+Width	=01
+Options	=[01]Low Current Idle	// Move "*" to the desired Option
+         *[00]Typical Current Idle
+         [0F]Auto
+
+Setup Question	= ACPI _CST C1 Declaration
+Help String	= Determines whether or not to declare the C1 state to the OS.
+Token	=20	// Do NOT change this line
+Offset	=30
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [03]Auto
+
+Setup Question	= Indirect Branch Prediction Speculation
+Help String	= No help string
+Token	=26	// Do NOT change this line
+Offset	=231
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [FF]Auto
+
+Setup Question	= Fast Short REP MOVSB
+Help String	= No help string
+Token	=27	// Do NOT change this line
+Offset	=230
+Width	=01
+Options	=[00]Disabled	// Move "*" to the desired Option
+         *[01]Enabled
+
+Setup Question	= Enhanced REP MOVSB/STOSB
+Help String	= No help string
+Token	=28	// Do NOT change this line
+Offset	=22F
+Width	=01
+Options	=[00]Disabled	// Move "*" to the desired Option
+         *[01]Enabled
+
+Setup Question	= REP-MOV/STOS Streaming
+Help String	= Allow REP-MOVS/STOS to use non-caching streaming stores for large sizes
+Token	=2A	// Do NOT change this line
+Offset	=233
+Width	=01
+Options	=*[01]Enabled	// Move "*" to the desired Option
+         [00]Disabled
+
+Setup Question	= L1 Stream HW Prefetcher
+Help String	= Option to Enable | Disable L1 Stream HW Prefetcher
+Token	=31	// Do NOT change this line
+Offset	=A9
+Width	=01
+Options	=[00]Disable	// Move "*" to the desired Option
+         *[01]Enable
+         [03]Auto
+
+Setup Question	= L2 Stream HW Prefetcher
+Help String	= Option to Enable | Disable L2 Stream HW Prefetcher
+Token	=32	// Do NOT change this line
+Offset	=AA
+Width	=01
+Options	=[00]Disable	// Move "*" to the desired Option
+         *[01]Enable
+         [03]Auto
+
+Setup Question	= Disable DF to external downstream IP SyncFloodPropagation
+Help String	= Disables Error propagation to UMC or any downstream slaves eg. FCH. Use this to avoid reset in failure scenario
+Token	=3A	// Do NOT change this line
+Offset	=AF
+Width	=01
+Options	=*[01]Sync flood disabled	// Move "*" to the desired Option
+         [00]Sync flood enabled
+         [FF]Auto
+
+Setup Question	= Disable DF sync flood propagation
+Help String	= Control DF::PIEConfig[DisSyncFloodProp]  Disables propagation from PIE to other DF components and eventually to SDP ports
+Token	=3B	// Do NOT change this line
+Offset	=B0
+Width	=01
+Options	=*[01]Sync flood disabled	// Move "*" to the desired Option
+         [00]Sync flood enabled
+         [FF]Auto
+
+Setup Question	= Freeze DF module queues on error
+Help String	= Disabling this option sets DF:PIEConfig[DisImmSyncFloodOnFatalError]  Enables freezing of all DF queues on error and also forces a sync flood on HWA even if MCAs are disabled
+Token	=3C	// Do NOT change this line
+Offset	=B1
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [03]Auto
+
+Setup Question	= CC6 memory region encryption
+Help String	= Control whether or not the CC6 save/restore memory is encrypted
+Token	=3D	// Do NOT change this line
+Offset	=B2
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [03]Auto
+
+Setup Question	= DRAM map inversion
+Help String	= Inverting the map will cause the highest memory channels to get assigned the lowest addresses in the system.
+Token	=4A	// Do NOT change this line
+Offset	=BE
+Width	=01
+Options	=[00]Disabled	// Move "*" to the desired Option
+         *[01]Enabled
+         [03]Auto
+
+Setup Question	= ACPI SRAT L3 Cache As NUMA Domain
+Help String	= Enabled: Each CCX in the system will be declared as a separate NUMA domain.  Disabled: Memory Addressing \ NUMA nodes per socket will be declared.
+Token	=4B	// Do NOT change this line
+Offset	=BF
+Width	=01
+Options	=[00]Disabled	// Move "*" to the desired Option
+         *[01]Enabled
+         [FF]Auto
+
+Setup Question	= GMI encryption control
+Help String	= Control GMI link encryption
+Token	=55	// Do NOT change this line
+Offset	=C9
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [03]Auto
+
+Setup Question	= xGMI encryption control
+Help String	= Control xGMI link encryption
+Token	=56	// Do NOT change this line
+Offset	=CA
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [03]Auto
+
+Setup Question	= RCD Parity
+Help String	= No help string
+Token	=AF	// Do NOT change this line
+Offset	=113
+Width	=01
+Options	=[FF]Auto	// Move "*" to the desired Option
+         *[00]Disabled
+         [01]Enabled
+
+Setup Question	= DRAM Address Command Parity Retry
+Help String	= UMC_CH::RecCtrl[RecEn][0] and UMC_CH::RecCtrl[MaxParRply]
+Token	=B0	// Do NOT change this line
+Offset	=114
+Width	=01
+Options	=[FF]Auto	// Move "*" to the desired Option
+         *[00]Disabled
+         [01]Enabled
+
+Setup Question	= Write CRC Enable
+Help String	= No help string
+Token	=B2	// Do NOT change this line
+Offset	=116
+Width	=01
+Options	=[FF]Auto	// Move "*" to the desired Option
+         *[00]Disabled
+         [01]Enabled
+
+Setup Question	= DRAM Write CRC Enable and Retry Limit
+Help String	= UMC_CH::RecCtrl[RecEn][1] and UMC_CH::RecCtrl[MaxCrcRply]
+Token	=B3	// Do NOT change this line
+Offset	=117
+Width	=01
+Options	=[FF]Auto	// Move "*" to the desired Option
+         *[00]Disabled
+         [01]Enabled
+
+Setup Question	= DRAM ECC Enable
+Help String	= Use this option to enable / disable DRAM ECC. Auto will set ECC to enable.
+Token	=B8	// Do NOT change this line
+Offset	=11B
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [FF]Auto
+
+Setup Question	= DRAM UECC Retry
+Help String	= Use this option to enable / disable DRAM UECC Retry.
+Token	=B9	// Do NOT change this line
+Offset	=11C
+Width	=01
+Options	=[FF]Auto	// Move "*" to the desired Option
+         [01]Enabled
+         *[00]Disabled
+
+Setup Question	= TSME
+Help String	= Transparent SME: AddrTweakEn = 1; ForceEncrEn =1; DataEncrEn = 0
+Token	=7026	// Do NOT change this line
+Offset	=11D
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [FF]Auto
+
+Setup Question	= IOMMU
+Help String	= Enable/Disable IOMMU
+Token	=E5	// Do NOT change this line
+Offset	=149
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [0F]Auto
+
+Setup Question	= DMA Protection
+Help String	= Enable DMA remap support in IVRS IVinfo Field.
+Token	=702A	// Do NOT change this line
+Offset	=236
+Width	=01
+Options	=[0F]Auto	// Move "*" to the desired Option
+         [01]Enabled
+         *[00]Disabled
+
+Setup Question	= DMAr Support
+Help String	= Enable DMAr system protection during POST.
+Token	=702B	// Do NOT change this line
+Offset	=237
+Width	=01
+Options	=[0F]Auto	// Move "*" to the desired Option
+         [01]Enabled
+         *[00]Disabled
+
+// Setup Question	= ACS Enable
+// Help String	= AER must be enabled for ACS enable to work
+// Token	=E8	// Do NOT change this line
+// Offset	=14B
+// Width	=01
+// Options	=[01]Enable	// Move "*" to the desired Option
+//         *[00]Disabled
+//         [0F]Auto
+
+Setup Question	= Enable AER Cap
+Help String	= Enables Advanced Error Reporting Capability
+Token	=EF	// Do NOT change this line
+Offset	=14E
+Width	=01
+Options	=[01]Enable	// Move "*" to the desired Option
+         *[00]Disabled
+         [0F]Auto
+
+Setup Question	= SoC/Uncore OC Mode
+Help String	= Forces CPU SoC/uncore components (e.g. Infinity Fabric, memory, and integrated graphics) to run at their maximum specified frequency at all times. May improve performance at the expense of idle power savings.
+Token	=105	// Do NOT change this line
+Offset	=256
+Width	=01
+Options	=[FF]Auto	// Move "*" to the desired Option
+         *[01]Enabled
+         [00]Disabled
+
+Setup Question	= LN2 Mode
+Help String	= Send a message to SMU to help with cold boot and operating under LN2 conditions for GMI2.
+Token	=106	// Do NOT change this line
+Offset	=257
+Width	=01
+Options	=[FF]Auto	// Move "*" to the desired Option
+         [01]Enabled
+         *[00]Disabled
+
+Setup Question	= xGMI Link Width Control
+Help String	= Auto = Use default xGMI link width controller settings  Manual = User can set custom xGMI link width controller settings
+Token	=116	// Do NOT change this line
+Offset	=179
+Width	=01
+Options	=*[01]Manual	// Move "*" to the desired Option
+         [00]Auto
+
+Setup Question	= xGMI Force Link Width
+Help String	= 0 = Force xGMI link width to x2  1 = Force xGMI link width to x8  2 = Force xGMI link width to x16
+Token	=117	// Do NOT change this line
+Offset	=17A
+Width	=01
+Options	=[00]0	// Move "*" to the desired Option
+         [01]1
+         *[02]2
+
+Setup Question	= xGMI Force Link Width Control
+Help String	= Unforce = Do not force the xGMI to a fixed width  Force = Force the xGMI link to the user specified width
+Token	=118	// Do NOT change this line
+Offset	=17B
+Width	=01
+Options	=[00]Unforce	// Move "*" to the desired Option
+         *[01]Force
+
+Setup Question	= xGMI Max Link Width
+Help String	= 0 = Set max xGMI link width to x8  1 = Set max xGMI link width to x16
+Token	=119	// Do NOT change this line
+Offset	=17C
+Width	=01
+Options	=[00]0	// Move "*" to the desired Option
+         *[01]1
+
+Setup Question	= xGMI Max Link Width Control
+Help String	= Auto = Use default xGMI max supported link width  Manual = User can set custom xGMI max link width
+Token	=11A	// Do NOT change this line
+Offset	=17D
+Width	=01
+Options	=[00]Auto	// Move "*" to the desired Option
+         *[01]Manual
+
+Setup Question	= APBDIS
+Help String	= 0 = not APBDIS (mission mode)  1 = APBDIS
+Token	=11B	// Do NOT change this line
+Offset	=17E
+Width	=01
+Options	=[00]0	// Move "*" to the desired Option
+         *[01]1
+         [0F]Auto
+
+Setup Question	= DF Cstates
+Help String	= Enable = Enable DF C-states  Disable = Disable DF C-states
+Token	=7032	// Do NOT change this line
+Offset	=17F
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [0F]Auto
+
+Setup Question	= NBIO DPM Control
+Help String	= This setting controls how the NBIO Power Management is controlled. Auto = Default SMU control & Manual allows invidual NBIO DPM Levels to be set
+Token	=12B	// Do NOT change this line
+Offset	=259
+Width	=01
+Options	=[00]Auto	// Move "*" to the desired Option
+         *[01]Manual
+
+Setup Question	= Socket 0 NBIO 0 Target DPM Level
+Help String	= Auto = Default SMU Control for the specified NBIO  1 = DPM Value for specified NBIO is 300 MHz  2 = DPM Value for specified NBIO is 600 MHz
+Token	=12C	// Do NOT change this line
+Offset	=25A
+Width	=01
+Options	=[0F]Auto	// Move "*" to the desired Option
+         [00]1
+         *[02]2
+
+Setup Question	= Socket 0 NBIO 1 Target DPM Level
+Help String	= Auto = Default SMU Control for the specified NBIO  1 = DPM Value for specified NBIO is 300 MHz  2 = DPM Value for specified NBIO is 600 MHz
+Token	=12D	// Do NOT change this line
+Offset	=25B
+Width	=01
+Options	=[0F]Auto	// Move "*" to the desired Option
+         [00]1
+         *[02]2
+
+Setup Question	= Socket 0 NBIO 2 Target DPM Level
+Help String	= Auto = Default SMU Control for the specified NBIO  1 = DPM Value for specified NBIO is 300 MHz  2 = DPM Value for specified NBIO is 600 MHz
+Token	=12E	// Do NOT change this line
+Offset	=25C
+Width	=01
+Options	=[0F]Auto	// Move "*" to the desired Option
+         [00]1
+         *[02]2
+
+
+Setup Question	= Socket 0 NBIO 3 Target DPM Level
+Help String	= Auto = Default SMU Control for the specified NBIO  1 = DPM Value for specified NBIO is 300 MHz  2 = DPM Value for specified NBIO is 600 MHz
+Token	=12F	// Do NOT change this line
+Offset	=25D
+Width	=01
+Options	=[0F]Auto	// Move "*" to the desired Option
+         [00]1
+         *[02]2
+
+Setup Question	= Socket 1 NBIO 0 Target DPM Level
+Help String	= Auto = Default SMU Control for the specified NBIO  1 = DPM Value for specified NBIO is 300 MHz  2 = DPM Value for specified NBIO is 600 MHz
+Token	=130	// Do NOT change this line
+Offset	=25E
+Width	=01
+Options	=[0F]Auto	// Move "*" to the desired Option
+         [00]1
+         *[02]2
+
+Setup Question	= Socket 1 NBIO 1 Target DPM Level
+Help String	= Auto = Default SMU Control for the specified NBIO  1 = DPM Value for specified NBIO is 300 MHz  2 = DPM Value for specified NBIO is 600 MHz
+Token	=131	// Do NOT change this line
+Offset	=25F
+Width	=01
+Options	=[0F]Auto	// Move "*" to the desired Option
+         [00]1
+         *[02]2
+
+Setup Question	= Socket 1 NBIO 2 Target DPM Level
+Help String	= Auto = Default SMU Control for the specified NBIO  1 = DPM Value for specified NBIO is 300 MHz  2 = DPM Value for specified NBIO is 600 MHz
+Token	=132	// Do NOT change this line
+Offset	=260
+Width	=01
+Options	=[0F]Auto	// Move "*" to the desired Option
+         [00]1
+         *[02]2
+
+Setup Question	= Socket 1 NBIO 3 Target DPM Level
+Help String	= Auto = Default SMU Control for the specified NBIO  1 = DPM Value for specified NBIO is 300 MHz  2 = DPM Value for specified NBIO is 600 MHz
+Token	=133	// Do NOT change this line
+Offset	=261
+Width	=01
+Options	=[0F]Auto	// Move "*" to the desired Option
+         [00]1
+         *[02]2
+
+Setup Question	= NBIO RAS Global Control
+Help String	= NBIO RAS Global Control
+Token	=134	// Do NOT change this line
+Offset	=18D
+Width	=01
+Options	=*[01]Manual	// Move "*" to the desired Option
+         [00]Auto
+
+Setup Question	= NBIO RAS Control
+Help String	= (0) Disabled, (1) MCA, (2) Legacy
+Token	=135	// Do NOT change this line
+Offset	=18E
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]MCA
+         [02]Legacy
+         [0F]Auto
+
+Setup Question	= NBIO SyncFlood Generation
+Help String	= This value may be used to mask SyncFlood caused by NBIO RAS options.  When set to TRUE SyncFlood from NBIO is masked.  When set to FALSE NBIO is capable of generating SyncFlood.
+Token	=138	// Do NOT change this line
+Offset	=197
+Width	=01
+Options	=[01]Enabled	// Move "*" to the desired Option
+         *[00]Disabled
+         [0F]Auto
+
+Setup Question	= NBIO SyncFlood Reporting
+Help String	= This value may be used to enable SyncFlood reporting to APML.  When set to TRUE SyncFlood will be reported to APML.  When set to FALSE that reporting well be disabled
+Token	=139	// Do NOT change this line
+Offset	=198
+Width	=01
+Options	=[01]Enabled	// Move "*" to the desired Option
+         *[00]Disabled
+         [0F]Auto
+
+Setup Question	= Log Poison Data from SLINK
+Help String	= This value specifies whether poison data propagated from SLINK will generate a deferred error.  When set to TRUE, deferred errors are enabled.  When set to FALSE, errors are not generated.
+Token	=141	// Do NOT change this line
+Offset	=1AF
+Width	=01
+Options	=[01]Enabled	// Move "*" to the desired Option
+         *[00]Disabled
+
+Setup Question	= Edpc Control
+Help String	= (0) Disabled; (1) Enabled; (3) Auto
+Token	=143	// Do NOT change this line
+Offset	=1B1
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [03]Auto
+
+Setup Question	= Sata RAS Support
+Help String	= Disable or enable Sata RAS Support
+Token	=150	// Do NOT change this line
+Offset	=1B6
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [0F]Auto
+
+Setup Question	= Aggresive SATA Device Sleep Port 0
+Help String	= No help string
+Token	=152	// Do NOT change this line
+Offset	=1B8
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [0F]Auto
+
+Setup Question	= Aggresive SATA Device Sleep Port 1
+Help String	= No help string
+Token	=154	// Do NOT change this line
+Offset	=1BA
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [0F]Auto
+
+Setup Question	= Socket1 DevSlp0 Enable
+Help String	= Only Sata0 on each IOD/socket support DevSlp.
+Token	=1AE	// Do NOT change this line
+Offset	=2B0
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [0F]Auto
+
+Setup Question	= Socket1 DevSlp1 Enable
+Help String	= Only Sata0 on each IOD/socket support DevSlp.
+Token	=1B0	// Do NOT change this line
+Offset	=2B2
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [0F]Auto
+
+
+Setup Question	= I2C 0 Enable
+Help String	= No help string
+Token	=1E4	// Do NOT change this line
+Offset	=1C3
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [0F]Auto
+
+Setup Question	= I2C 1 Enable
+Help String	= No help string
+Token	=1E5	// Do NOT change this line
+Offset	=1C4
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [0F]Auto
+
+Setup Question	= I2C 2 Enable
+Help String	= No help string
+Token	=1E6	// Do NOT change this line
+Offset	=1C5
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [0F]Auto
+
+Setup Question	= I2C 3 Enable
+Help String	= No help string
+Token	=1E7	// Do NOT change this line
+Offset	=1C6
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [0F]Auto
+
+Setup Question	= I2C 4 Enable
+Help String	= No help string
+Token	=1E8	// Do NOT change this line
+Offset	=1C7
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [0F]Auto
+
+Setup Question	= I2C 5 Enable
+Help String	= No help string
+Token	=1E9	// Do NOT change this line
+Offset	=1C8
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [0F]Auto
+
+Setup Question	= ESPI Enable
+Help String	= No help string
+Token	=1F2	// Do NOT change this line
+Offset	=1D1
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [0F]Auto
+
+Setup Question	= ALink RAS Support
+Help String	= No help string
+Token	=1F8	// Do NOT change this line
+Offset	=1D6
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [0F]Auto
+
+Setup Question	= Channel Interleaving
+Help String	= Enable/Disable Channel Interleaving
+Token	=3A	// Do NOT change this line
+Offset	=162
+Width	=01
+BIOS Default	=[00]Auto 
+Options	=[00]Auto	// Move "*" to the desired Option
+         *[01]Enabled
+         [02]Disabled
+
+Setup Question	= PCIe ASPM Mode
+Help String	= Set the ASPM Level
+Token	=C1	// Do NOT change this line
+Offset	=206
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]L0s Entry
+         [02]L1 Entry
+         [03]L0s And L1 Entry
+
+Setup Question	= 3DMark01 Enhancement
+Help String	= Enable legacy benchmark enhancement for enhanced performance of older benchmarks including 3DMark 01.
+Token	=C2	// Do NOT change this line
+Offset	=203
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	=  PS2 Devices Support
+Help String	= If Disabled, PS2 devices will be skipped.
+Token	=D0	// Do NOT change this line
+Offset	=06
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	=  Network Stack Driver Support
+Help String	= If Disabled, NetWork Stack Driver will be skipped.
+Token	=D1	// Do NOT change this line
+Offset	=09
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= Enable Hibernation
+Help String	= Enables or Disables System ability to Hibernate (OS/S4 Sleep State). This option may not be effective with some operating systems.
+Token	=10B	// Do NOT change this line
+Offset	=4B
+Width	=01
+BIOS Default	=1 
+Value	=0	// Enabled = 1, Disabled = 0
+
+Setup Question	= ACPI Sleep State
+Help String	= Select the highest ACPI sleep state the system will enter when the SUSPEND button is pressed.
+Token	=10C	// Do NOT change this line
+Offset	=49
+Width	=02
+BIOS Default	=[02]S3 (Suspend to RAM) 
+Options	=*[00]Suspend Disabled	// Move "*" to the desired Option
+         [02]S3 (Suspend to RAM)
+
+Setup Question	= CRB test
+Help String	= CRB test
+Token	=142	// Do NOT change this line
+Offset	=123
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= AMD Cool&Quiet function
+Help String	= Enable or Disable AMD Cool&Quiet function.
+Token	=143	// Do NOT change this line
+Offset	=22A
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= IOMMU
+Help String	= Enable/Disable IOMMU Support
+Token	=17F	// Do NOT change this line
+Offset	=253
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [FF]Auto
+
+Setup Question	= IOMMU
+Help String	= Enable/Disable IOMMU Support
+Token	=180	// Do NOT change this line
+Offset	=25D
+Width	=01
+BIOS Default	=[0F]Auto 
+Options	=[0F]Auto	// Move "*" to the desired Option
+         *[00]Disabled
+         [01]Enabled
+
+Setup Question	= I2C 0 Enable
+Help String	= I2C 0 Enable
+Token	=1C7	// Do NOT change this line
+Offset	=70
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=[01]Enabled	// Move "*" to the desired Option
+         *[00]Disabled
+
+Setup Question	= I2C 1 Enable
+Help String	= I2C 1 Enable
+Token	=1C8	// Do NOT change this line
+Offset	=71
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=[01]Enabled	// Move "*" to the desired Option
+         *[00]Disabled
+
+Setup Question	= I2C 2 Enable
+Help String	= I2C 2 Enable
+Token	=1C9	// Do NOT change this line
+Offset	=72
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=[01]Enabled	// Move "*" to the desired Option
+         *[00]Disabled
+
+Setup Question	= I2C 3 Enable
+Help String	= I2C 3 Enable
+Token	=1CA	// Do NOT change this line
+Offset	=73
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=[01]Enabled	// Move "*" to the desired Option
+         *[00]Disabled
+
+Setup Question	= AB Clock Gating
+Help String	= Enable/Disable AB Internal Clock Gating
+Token	=1CB	// Do NOT change this line
+Offset	=76
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [FF]Auto
+
+Setup Question	= PCIB Clock Run
+Help String	= Enable The Auto Clkrun Functionality
+Token	=1CC	// Do NOT change this line
+Offset	=77
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [FF]Auto
+
+
+Setup Question	= Aggressive Link PM Capability
+Help String	= Indicates Whether Host Bus Adapter (HBA) Can Support Auto-Generating Link Requests To The Partial Or Slumber States When There Are No Commands To Process
+Token	=1F1	// Do NOT change this line
+Offset	=95
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [FF]Auto
+
+Setup Question	= EHCI Traffic Handling
+Help String	= Cause CPU To Break Out From C State When USB EHCI Has Pending Traffic
+Token	=202	// Do NOT change this line
+Offset	=A6
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=[00]Disabled	// Move "*" to the desired Option
+         *[01]Enabled
+
+Setup Question	= I2C 0 D3 Support
+Help String	= I2C 0 D3 Support
+Token	=20A	// Do NOT change this line
+Offset	=AF
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [FF]Auto
+
+Setup Question	= I2C 1 D3 Support
+Help String	= I2C 1 D3 Support
+Token	=20B	// Do NOT change this line
+Offset	=B0
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [FF]Auto
+
+Setup Question	= I2C 2 D3 Support
+Help String	= I2C 2 D3 Support
+Token	=20C	// Do NOT change this line
+Offset	=B1
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [FF]Auto
+
+Setup Question	= I2C 3 D3 Support
+Help String	= I2C 3 D3 Support
+Token	=20D	// Do NOT change this line
+Offset	=B2
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [FF]Auto
+
+Setup Question	= I2C 4 D3 Support
+Help String	= I2C 4 D3 Support
+Token	=20E	// Do NOT change this line
+Offset	=B3
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [FF]Auto
+
+Setup Question	= I2C 5 D3 Support
+Help String	= I2C 5 D3 Support
+Token	=20F	// Do NOT change this line
+Offset	=B4
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [FF]Auto
+
+Setup Question	= UART 0 D3 Support
+Help String	= UART 0 D3 Support
+Token	=210	// Do NOT change this line
+Offset	=B5
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [FF]Auto
+
+Setup Question	= UART 1 D3 Support
+Help String	= UART 1 D3 Support
+Token	=211	// Do NOT change this line
+Offset	=B6
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [FF]Auto
+
+Setup Question	= UART 2 D3 Support
+Help String	= UART 2 D3 Support
+Token	=212	// Do NOT change this line
+Offset	=B7
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [FF]Auto
+
+Setup Question	= UART 3 D3 Support
+Help String	= UART 3 D3 Support
+Token	=213	// Do NOT change this line
+Offset	=B8
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [FF]Auto
+
+Setup Question	= SATA D3 Support
+Help String	= SATA D3 Support
+Token	=214	// Do NOT change this line
+Offset	=B9
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [FF]Auto
+
+Setup Question	= EHCI D3 Support
+Help String	= EHCI D3 Support
+Token	=215	// Do NOT change this line
+Offset	=BA
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [FF]Auto
+
+Setup Question	= XHCI D3 Support
+Help String	= XHCI D3 Support
+Token	=216	// Do NOT change this line
+Offset	=BB
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [FF]Auto
+
+Setup Question	= SD D3 Support
+Help String	= SD D3 Support
+Token	=217	// Do NOT change this line
+Offset	=BC
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [FF]Auto
+
+Setup Question	= S0I3
+Help String	= S0I3 flag
+Token	=218	// Do NOT change this line
+Offset	=BD
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [FF]Auto
+
+Setup Question	= Chipset Power Saving Features
+Help String	= Chipset Power Saving Features
+Token	=219	// Do NOT change this line
+Offset	=BE
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= SB Clock Spread Spectrum
+Help String	= Enable/Disable CG1_PLL Spread Spectrum
+Token	=21A	// Do NOT change this line
+Offset	=BF
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [FF]Auto
+
+Setup Question	= USB Phy Power Down
+Help String	= Support for S4/S5 USB PHY Power Down
+Token	=21F	// Do NOT change this line
+Offset	=C3
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [FF]Auto
+
+// Setup Question	= IOMMU
+// Help String	= Enable/Disable IOMMU Support
+// Token	=228	// Do NOT change this line
+// Offset	=253
+// Width	=01
+// BIOS Default	=[FF]Auto 
+// Options	=*[00]Disabled	// Move "*" to the desired Option
+//         [01]Enabled
+//         [FF]Auto
+
+Setup Question	= Remote Display Feature
+Help String	= Enable/Disable Remote Display Feature Support
+Token	=229	// Do NOT change this line
+Offset	=254
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [FF]Auto
+
+Setup Question	= High Precision Event Timer
+Help String	= Enable or Disable the High Precision Event Timer.
+Token	=21C	// Do NOT change this line
+Offset	=C0
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=[00]Disabled	// Move "*" to the desired Option
+         *[01]Enabled
+
+// Setup Question	= High Precision Event Timer
+// Help String	= Enable or Disable the High Precision Event Timer.
+// Token	=23F	// Do NOT change this line
+// Offset	=C0
+// Width	=01
+// BIOS Default	=[01]Enabled 
+// Options	=[00]Disabled	// Move "*" to the desired Option
+//         *[01]Enabled
+
+Setup Question	= Above 4G Decoding
+Help String	= Globally Enables or Disables 64bit capable Devices to be Decoded in Above 4G Address Space (Only if System Supports 64 bit PCI Decoding).
+Token	=E1	// Do NOT change this line
+Offset	=26A
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=[00]Disabled	// Move "*" to the desired Option
+         *[01]Enabled
+
+Setup Question	= Re-Size BAR Support
+Help String	= If system has Resizable BAR capable PCIe Devices, this option Enables or Disables Resizable BAR Support(Only if System Supports 64 bit PCI Decoding).
+Token	=2A25	// Do NOT change this line
+Offset	=26B
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=[00]Disabled	// Move "*" to the desired Option
+         *[01]Auto
+
+Setup Question	= Above 4G Decoding
+Help String	= Globally Enables or Disables 64bit capable Devices to be Decoded in Above 4G Address Space (Only if System Supports 64 bit PCI Decoding).
+Token	=7006	// Do NOT change this line
+Offset	=03
+Width	=01
+BIOS Default	=0 
+Value	=1	// Enabled = 1, Disabled = 0
+
+Setup Question	= Re-Size BAR Support
+Help String	= If system has Resizable BAR capable PCIe Devices, this option Enables or Disables Resizable BAR Support(Only if System Supports 64 bit PCI Decoding).
+Token	=01	// Do NOT change this line
+Offset	=04
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=[00]Disabled	// Move "*" to the desired Option
+         *[01]Auto
+
+Setup Question	= SR-IOV Support
+Help String	= If system has SR-IOV capable PCIe Devices, this option Enables or Disables Single Root IO Virtualization Support.
+Token	=7007	// Do NOT change this line
+Offset	=05
+Width	=01
+BIOS Default	=0 
+Value	=0	// Enabled = 1, Disabled = 0
+
+Setup Question	= BME DMA Mitigation
+Help String	= Re-enable Bus Master Attribute disabled during Pci enumeration for PCI Bridges after SMM Locked 
+Token	=702A	// Do NOT change this line
+Offset	=06
+Width	=01
+BIOS Default	=0 
+Value	=0	// Enabled = 1, Disabled = 0
+
+Setup Question	= Int. Clk Differential Spread
+Help String	= SB Spread Spectrum Item Have To Enable
+Token	=1EE	// Do NOT change this line
+Offset	=92
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [FF]Auto
+
+Setup Question	= Data Poisoning
+Help String	= No help string
+Token	=AD	// Do NOT change this line
+Offset	=111
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [FF]Auto
+
+Setup Question	= SVM Mode
+Help String	= Enable/Disable CPU Virtualization.
+Token	=24	// Do NOT change this line
+Offset	=14C
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= SVM Mode
+Help String	= Enable/Disable CPU Virtualization.
+Token	=14D	// Do NOT change this line
+Offset	=22D
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= Opcache Control
+Help String	= Enable/Disable the Opcache.
+Token	=30	// Do NOT change this line
+Offset	=150
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[01]Disabled	// Move "*" to the desired Option
+         [00]Enabled
+         [FF]Auto
+
+Setup Question	= SATA Slumber State Capability
+Help String	= Indicates Whether SATA Host Bus Adapter (HBA) Can Support Transitions To The Slumber State
+Token	=1F7	// Do NOT change this line
+Offset	=9B
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [FF]Auto
