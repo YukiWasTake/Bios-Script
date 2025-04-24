@@ -1,0 +1,77 @@
+Here is a list of additional settings that can be changed in bios if desired.
+=============================================================================
+        * These settings were not added due to various reasons *
+
+*****************************
+Created By Yuki (YukiWasTake)  
+*****************************
+
+----------------------
+PCI Subsystem Settings
+----------------------
++ PCI_E1 - Max Link Speed: Set to highest gen
+
+----------------------
+Integrated Peripherals
+----------------------
++ VGA Card Detection: Disable - If you don't use integrated grahpics
++ HD Audio Controller: Disable - ONLY if your headphones are connected via USB (audio won't work if you use the audio jacks on your motherboard when disabled)
+
+-----------------
+USB Configuration
+-----------------
++ XHCI Hand-Off: Disable - Setting to enable allows the OS to handle USB 3.0 controller (disabled is better in most cases)
++ Legacy USB Support: Optional - Makes your keyboard and mouse compatible with PS2. Can be disabled, but needs to be enabled when attempting to boot media (ISO File)
+
+----------------
+Serial IO Config
+----------------
++ Serial (COM) Port 0 Configuration: Disable - 99% of people don't need this
+
+------------------------
+Windows OS Configuration
+------------------------
++ Secure Boot - Disable if you don't play Valorant (with the exception of a few other games anti-cheat)
+
+-------------------
+Wake Up Event Setup
+-------------------
++ Wake Up Event By: Set all to bios which should be the default
+
+**********************************************************************************
+                                  Overclocking
+**********************************************************************************
+
++ OC Explore Mode - Expert
++ Memory Fast Boot - Disabled
+
+------------------
+DRAM Configuration
+------------------
++ XMP: Set to profile 1
+
+---------------------------
+Advanced DRAM Configuration
+---------------------------
++ Gear Down Mode: Most cases leave on auto/enable
++ Power Down Enable: Disable - if Gear Down Mode is set to enable
++ BankGroupSwap: Disable - (if you disable you must enable BankGroupSwapAlt)
++ BankGroupSwapAlt: Enable
+
+--------------------------
+Advanced CPU Configuration
+--------------------------
++ Global C-State Control: Disabled - the script already does but if you experience stutters set to enable or auto
++ Spread Spectrum: Disable
++ NX Mode: Disable - if you don't play Valorant
++ PSS Support: Disable - power saving
++ CPPC: auto/enable
++ CPPC Preferred Cores: Mixed opinions about this setting, experiment with disable otherwise leave on auto
++ Precision Boost Overdrive: Auto - unless your CPU supports max boost clock override in which case set to +200 in advanced or if applying negative offset through Curve Optimizer
+
+--------
+Security
+--------
++ Security Device Support/TPM: Disable if don't play Valorant (will need to bypass with registry if on stock Windows 11 <--- (not necessary on YukiOS))
+
+
