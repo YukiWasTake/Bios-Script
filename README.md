@@ -1,6 +1,6 @@
 # **Yuki SCEWIN Bios Script**
 
-## Restore / Troubleshoot :wrench:
+## :wrench: Restore / Troubleshoot
 > [!Important]
 > **In the case that you are unable to boot into Windows or If this script produced undesired results copy and paste the following commands into the specified shell**
 ### Powershell / Terminal
