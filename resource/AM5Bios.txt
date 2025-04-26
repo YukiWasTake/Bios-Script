@@ -1,0 +1,1015 @@
+// Script File Name : AM5Bios.txt
+HIICrc32=
+
+Setup Question	= PM L1 SS
+Help String	= Enable for PM L1 SS and ASPM L1 SS
+Token	=09	// Do NOT change this line
+Offset	=12
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]L1.1
+         [02]L1.2
+         [03]L1.1_L1.2
+
+Setup Question	= ACP Power Gating
+Help String	= Enable or Disable ACP Power Gating
+Token	=0E	// Do NOT change this line
+Offset	=1A
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= ACP CLock Gating
+Help String	= Enable or Disable ACP CLOCK Gating
+Token	=0F	// Do NOT change this line
+Offset	=1B
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	=   Discrete GPU Hotplug Mode
+Help String	= Select Discrete GPU Hotplug Mode - HotplugEnhanced or HotplugBasic
+Token	=30	// Do NOT change this line
+Offset	=22
+Width	=01
+Options	=[00]Basic Mode	// Move "*" to the desired Option
+         [01]Enhanced Mode
+         *[02]Non-Hotplug Mode
+
+Setup Question	= Internal PCIe GPP 0 D3
+Help String	= Enabled Internal PCIe GPP Bridge 0 D3
+Token	=52	// Do NOT change this line
+Offset	=68
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [04]Enabled
+
+Setup Question	=   SOC GPU D3
+Help String	= Enabled SOC GPU D3
+Token	=53	// Do NOT change this line
+Offset	=69
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [04]Enabled 
+
+Setup Question	=   SOC HD Audio D3
+Help String	= Enabled SOC HD Audio D3
+Token	=54	// Do NOT change this line
+Offset	=6B
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [04]Enabled 
+
+Setup Question	=   SOC USB3.1 D3
+Help String	= Enabled SOC USB3.1 0 D3
+Token	=55	// Do NOT change this line
+Offset	=6A
+Width	=01
+Options	=[00]Disabled	// Move "*" to the desired Option
+         *[04]Enabled 
+
+Setup Question	=   SOC ACP D3
+Help String	= Enabled SOC ACP D3
+Token	=56	// Do NOT change this line
+Offset	=6C
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [04]Enabled 
+
+Setup Question	=   SOC Azalia D3
+Help String	= Enabled SOC Azalia D3
+Token	=57	// Do NOT change this line
+Offset	=6D
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [04]Enabled 
+
+Setup Question	= Internal PCIe GPP 2 D3
+Help String	= Enabled Internal PCIe GPP Bridge 2 D3
+Token	=58	// Do NOT change this line
+Offset	=6E
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [04]Enabled
+
+Setup Question	= D3Cold Support
+Help String	= Enable/Disable PCIe x8 Slot D3Cold
+Token	=33	// Do NOT change this line
+Offset	=29
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled 
+         [02]Dummy D3Cold
+
+Setup Question	=   NVME D3Cold
+Help String	= Enabled/Disabled NVME D3Cold
+Token	=24	// Do NOT change this line
+Offset	=3E
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	=   Modern Standby Type
+Help String	= Select S0I2 or S0I3 type for Modern Standby.
+Token	=23	// Do NOT change this line
+Offset	=3D
+Width	=01
+Options	=[00]Modern Standby + S0i2	// Move "*" to the desired Option
+         *[01]Modern Standby + S0i3
+         [02]Modern Standby + S0i2 + S0i3
+
+
+Setup Question	= Unused GPP Clocks Off
+Help String	= Turn Unused GPP Clocks Off
+Token	=07	// Do NOT change this line
+Offset	=03
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled 
+
+Setup Question	= Clock Power Management(CLKREQ#)
+Help String	= Enable or disable CLKREQ#
+Token	=08	// Do NOT change this line
+Offset	=04
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= ACPI _CST C1 Declaration
+Help String	= Determines whether or not to declare the C1 state to the OS.
+Token	=16	// Do NOT change this line
+Offset	=2E
+Width	=01
+BIOS Default	=[03]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [03]Auto
+
+Setup Question	= SMEE
+Help String	= Control secure memory encryption enable
+Token	=22	// Do NOT change this line
+Offset	=B8
+Width	=01
+BIOS Default	=[03]Auto 
+Options	=*[00]Disable	// Move "*" to the desired Option
+         [01]Enable
+         [03]Auto
+
+Setup Question	= TSME
+Help String	= No help string
+Token	=7023	// Do NOT change this line
+Offset	=172
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=[FF]Auto	// Move "*" to the desired Option
+         [01]Enabled
+         *[00]Disabled
+
+Setup Question	= TSME
+Help String	= Enables or disables TSME function.
+Token	=2CE3	// Do NOT change this line
+Offset	=5FB
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=[FF]Auto	// Move "*" to the desired Option
+         *[00]Disabled
+         [01]Enabled
+
+Setup Question	= TSME
+Help String	= Enables or disables TSME function.
+Token	=2C2E	// Do NOT change this line
+Offset	=404
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=[FF]Auto	// Move "*" to the desired Option
+         *[00]Disabled
+         [01]Enabled
+
+Setup Question	= Data Scramble
+Help String	= Data scrambling: DataScrambleEn
+Token	=7024	// Do NOT change this line
+Offset	=173
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=[01]Enabled	// Move "*" to the desired Option
+         *[00]Disabled
+         [FF]Auto
+
+
+Setup Question	= Data Scramble
+Help String	= Data scrambling: DataScrambleEn
+Token	=2CE4	// Do NOT change this line
+Offset	=5FC
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=[FF]Auto	// Move "*" to the desired Option
+         *[00]Disabled
+         [01]Enabled
+
+Setup Question	= Data Scramble
+Help String	= Data scrambling: DataScrambleEn
+Token	=2C2F	// Do NOT change this line
+Offset	=405
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=[FF]Auto	// Move "*" to the desired Option
+         *[00]Disabled
+         [01]Enabled
+
+Setup Question	= Disable DF to external downstream IP Sync Flood Propagation
+Help String	= Disables Error propagation to UMC or any downstream slaves eg. FCH. Use this to avoid reset in failure scenario
+Token	=39	// Do NOT change this line
+Offset	=39
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[01]Sync flood disabled	// Move "*" to the desired Option
+         [00]Sync flood enabled
+         [FF]Auto
+
+Setup Question	= Disable DF sync flood propagation
+Help String	= Control DF::PIEConfig[DisSyncFloodProp]  Disables propagation from PIE to other DF components and eventually to SDP ports
+Token	=3A	// Do NOT change this line
+Offset	=3A
+Width	=01
+BIOS Default	=[03]Auto 
+Options	=*[01]Sync flood disabled	// Move "*" to the desired Option
+         [00]Sync flood enabled
+         [03]Auto
+
+Setup Question	= DF Cstates
+Help String	= When DF Cstate feature is enabled, FW programs the registers required to enable this feature is the DF HW. (For auto option, it means this option will synchronized with Global C State.)
+Token	=3C	// Do NOT change this line
+Offset	=3C
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [FF]Auto
+
+Setup Question	= SVM Enable
+Help String	= Enable or Disable VM_CR[SvmeDisable].
+Token	=2CB8	// Do NOT change this line
+Offset	=4F2
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=[FF]Auto	// Move "*" to the desired Option
+         *[00]Disabled
+         [01]Enabled
+
+Setup Question	= SVM Enable
+Help String	= Enable or Disable VM_CR[SvmeDisable].
+Token	=2C06	// Do NOT change this line
+Offset	=334
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=[FF]Auto	// Move "*" to the desired Option
+         *[00]Disabled
+         [01]Enabled
+
+Setup Question	= IOMMU
+Help String	= Enable/Disable IOMMU
+Token	=7033	// Do NOT change this line
+Offset	=3D
+Width	=01
+BIOS Default	=[0F]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [0F]Auto
+
+Setup Question	= IOMMU
+Help String	= Enables or disables IO MMU fucntion.
+Token	=2D04	// Do NOT change this line
+Offset	=61F
+Width	=01
+BIOS Default	=[0F]Auto 
+Options	=[0F]Auto	// Move "*" to the desired Option
+         *[00]Disabled
+         [01]Enabled
+
+Setup Question	= BME DMA Mitigation
+Help String	= Re-enable Bus Master Attribute disabled during Pci enumeration for PCI Bridges after SMM Locked 
+Token	=5D	// Do NOT change this line
+Offset	=1A9
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= Unpopulated Links
+Help String	= In order to save power, software will disable unpopulated PCI Express links, if this option set to 'Disable Link'.
+Token	=6A	// Do NOT change this line
+Offset	=1B9
+Width	=01
+BIOS Default	=[00]Keep Link ON 
+Options	=*[00]Keep Link ON	// Move "*" to the desired Option
+         [01]Disabled
+
+Setup Question	=   TPM State
+Help String	= Enable/Disable Security Device. NOTE: Your Computer will reboot during restart in order to change State of the Device.
+Token	=DC	// Do NOT change this line
+Offset	=0D
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= AMD fTPM switch
+Help String	= To select.0:AMD CPU fTPM. 1:AMD CPU fTPM Disabled.
+Token	=271F	// Do NOT change this line
+Offset	=2F
+Width	=01
+BIOS Default	=[01]AMD CPU fTPM 
+Options	=[01]AMD CPU fTPM	// Move "*" to the desired Option
+         *[00]AMD CPU fTPM Disabled
+
+Setup Question	=   Security Device Support
+Help String	= Enables or Disables BIOS support for security device. O.S. will not show Security Device. TCG EFI protocol and INT1A interface will not be available.
+Token	=D9	// Do NOT change this line
+Offset	=12
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+// Setup Question	= PSS Support
+// Help String	= Enable/disable the generation of ACPI _PPC, _PSS, and _PCT objects.
+// Token	=1DE	// Do NOT change this line
+// Offset	=184
+// Width	=01
+// BIOS Default	=[01]Enabled 
+// Options	=*[00]Disabled	// Move "*" to the desired Option
+//         [01]Enabled
+
+Setup Question	= PSS Support
+Help String	= Enable/disable the generation of ACPI _PPC, _PSS, and _PCT objects.
+Token	=47	// Do NOT change this line
+Offset	=184
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+// Setup Question	= ASPM Control for CPU PCIe
+// Help String	= Enabled for activate ASPM operations of PCIe in OS.
+// Token	=168	// Do NOT change this line
+// Offset	=40
+// Width	=01
+// BIOS Default	=[FF]Auto 
+// Options	=*[00]Disabled	// Move "*" to the desired Option
+//         [01]L0s Entry
+//         [02]L1 Entry
+//         [03]L0s And L1 Entry
+//         [FF]Auto
+
+Setup Question	= ASPM Control for CPU PCIe
+Help String	= Enabled for activate ASPM operations of PCIe in OS.
+Token	=2F	// Do NOT change this line
+Offset	=40
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]L0s Entry
+         [02]L1 Entry
+         [03]L0s And L1 Entry
+         [FF]Auto
+
+Setup Question	= Device Sleep for AHCI Port 0
+Help String	= Enable/Disable Device Sleep for AHCI port 0
+Token	=19C	// Do NOT change this line
+Offset	=C7
+Width	=01
+BIOS Default	=[0F]Auto 
+Options	=*[00]Disable	// Move "*" to the desired Option
+         [01]Enable
+         [0F]Auto
+
+Setup Question	= Device Sleep for AHCI Port 1
+Help String	= Enable/Disable Device Sleep for AHCI port 1
+Token	=19D	// Do NOT change this line
+Offset	=C8
+Width	=01
+BIOS Default	=[0F]Auto 
+Options	=*[00]Disable	// Move "*" to the desired Option
+         [01]Enable
+         [0F]Auto
+
+Setup Question	= Device Sleep for AHCI Port 2
+Help String	= Enable/Disable Device Sleep for AHCI port 2
+Token	=19E	// Do NOT change this line
+Offset	=C9
+Width	=01
+BIOS Default	=[0F]Auto 
+Options	=*[00]Disable	// Move "*" to the desired Option
+         [01]Enable
+         [0F]Auto
+
+Setup Question	= Device Sleep for AHCI Port 3
+Help String	= Enable/Disable Device Sleep for AHCI port 3
+Token	=19F	// Do NOT change this line
+Offset	=CA
+Width	=01
+BIOS Default	=[0F]Auto 
+Options	=*[00]Disable	// Move "*" to the desired Option
+         [01]Enable
+         [0F]Auto
+
+Setup Question	= SR-IOV Support
+Help String	= If system has SR-IOV capable PCIe Devices, this option Enables or Disables Single Root IO Virtualization Support.
+Token	=5C	// Do NOT change this line
+Offset	=1A8
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+// Setup Question	= SR-IOV Support
+// Help String	= If system has SR-IOV capable PCIe Devices, this option Enables or Disables Single Root IO Virtualization Support.
+// Token	=169	// Do NOT change this line
+// Offset	=1A8
+// Width	=01
+// BIOS Default	=[00]Disabled 
+// Options	=*[00]Disabled	// Move "*" to the desired Option
+//         [01]Enabled
+
+// Setup Question	= SR-IOV Support
+// Help String	= If system has SR-IOV capable PCIe Devices, this option Enables or Disables Single Root IO Virtualization Support.
+// Token	=17B	// Do NOT change this line
+// Offset	=1A8
+// Width	=01
+// BIOS Default	=[00]Disabled 
+// Options	=*[00]Disabled	// Move "*" to the desired Option
+//         [01]Enabled
+
+Setup Question	= FCH Spread Spectrum
+Help String	= Enables or disables the EMI (Electromagnetic Interference) generated by modulating clock generator pulses.
+Token	=2D8E	// Do NOT change this line
+Offset	=6E8
+Width	=01
+BIOS Default	=[0F]Auto 
+Options	=[0F]Auto	// Move "*" to the desired Option
+         *[00]Disabled
+         [01]Enabled
+
+Setup Question	= FCH Spread Spectrum
+Help String	= Enables or disables the EMI (Electromagnetic Interference) generated by modulating clock generator pulses.
+Token	=2C84	// Do NOT change this line
+Offset	=47C
+Width	=01
+BIOS Default	=[0F]Auto 
+Options	=[0F]Auto	// Move "*" to the desired Option
+         *[00]Disabled
+         [01]Enabled
+
+Setup Question	= FCH Spread Spectrum
+Help String	= Select whether or not Enable the Spread Spectrum Feature
+Token	=F5	// Do NOT change this line
+Offset	=63
+Width	=01
+BIOS Default	=[0F]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [0F]Auto
+
+Setup Question	= IPv4 HTTP Support
+Help String	= Enable/Disable IPv4 HTTP boot support. If disabled, IPv4 HTTP boot support will not be available.
+Token	=9E	// Do NOT change this line
+Offset	=06
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= Ipv6 PXE Support
+Help String	= When Enabled, the system UEFI network stack will support IPv6 protocol.
+Token	=9F	// Do NOT change this line
+Offset	=02
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= IPv6 HTTP Support
+Help String	= Enable/Disable IPv6 HTTP boot support. If disabled, IPv6 HTTP boot support will not be available.
+Token	=A0	// Do NOT change this line
+Offset	=07
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	=  PS2 Devices Support
+Help String	= If Enabled, PS2 devices will be skipped.
+Token	=C2	// Do NOT change this line
+Offset	=05
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= iGPU Configuration
+Help String	= UMA Mode
+Token	=EB	// Do NOT change this line
+Offset	=44
+Width	=01
+BIOS Default	=[02]UMA_AUTO 
+Options	=[0F]Auto	// Move "*" to the desired Option
+         *[00]iGPU Disabled
+         [01]UMA_SPECIFIED
+         [02]UMA_AUTO
+         [03]UMA_GAME_OPTIMIZED
+
+Setup Question	= BME DMA Mitigation
+Help String	= Re-enable Bus Master Attribute disabled during Pci enumeration for PCI Bridges after SMM Locked 
+Token	=5D	// Do NOT change this line
+Offset	=1A9
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= PCI-X Latency Timer
+Help String	= Sets latency timer for PCI interface device.
+Token	=56	// Do NOT change this line
+Offset	=1AE
+Width	=01
+BIOS Default	=[40]64 PCI Bus Clocks 
+Options	=*[20]32 PCI Bus Clocks	// Move "*" to the desired Option
+         [40]64 PCI Bus Clocks
+         [60]96 PCI Bus Clocks
+         [80]128 PCI Bus Clocks
+         [A0]160 PCI Bus Clocks
+         [C0]192 PCI Bus Clocks
+         [E0]224 PCI Bus Clocks
+         [F8]248 PCI Bus Clocks
+
+Setup Question	= Special Display Features
+Help String	= Enable/Disable HybridGraphics
+Token	=7D1	// Do NOT change this line
+Offset	=1F
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [04]HybridGraphics
+         
+Setup Question	=  Network Stack Driver Support
+Help String	= If Disabled, NetWork Stack Driver will be skipped.
+Token	=C3	// Do NOT change this line
+Offset	=08
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= Lock Legacy Resources
+Help String	= Enables or Disables Lock of Legacy Resources
+Token	=54	// Do NOT change this line
+Offset	=00
+Width	=01
+BIOS Default	=0 
+Value	=0	// Enabled = 1, Disabled = 0
+
+Setup Question	= PSPP Policy
+Help String	= No help string
+Token	=2D09	// Do NOT change this line
+Offset	=624
+Width	=01
+BIOS Default	=[0F]Auto 
+Options	=[0F]Auto	// Move "*" to the desired Option
+         *[00]Disabled
+         [02]Balanced
+
+Setup Question	= PSPP Policy
+Help String	= No help string
+Token	=2C42	// Do NOT change this line
+Offset	=41A
+Width	=01
+BIOS Default	=[0F]Auto 
+Options	=[0F]Auto	// Move "*" to the desired Option
+         *[00]Disabled
+         [02]Balanced
+
+Setup Question	= PSPP Policy
+Help String	= No help string
+Token	=7035	// Do NOT change this line
+Offset	=43
+Width	=01
+BIOS Default	=[0F]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [02]Balanced
+         [0F]Auto
+
+Setup Question	= Enable Hibernation
+Help String	= Enables or Disables System ability to Hibernate (OS/S4 Sleep State). This option may not be effective with some operating systems.
+Token	=29	// Do NOT change this line
+Offset	=34
+Width	=01
+BIOS Default	=1 
+Value	=0	// Enabled = 1, Disabled = 0
+
+Setup Question	= ACPI Standby State
+Help String	= Select the highest ACPI sleep state the system will enter when the SUSPEND button is pressed.
+Token	=2A	// Do NOT change this line
+Offset	=32
+Width	=02
+BIOS Default	=[02]S3 
+Options	=*[00]Suspend Disabled	// Move "*" to the desired Option
+         [02]S3
+        
+Setup Question	= Onboard PCIE LAN PXE ROM
+Help String	= The Onboard PCIE LAN PXE ROM 
+Token	=2B	// Do NOT change this line
+Offset	=3A
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	=   ASPM Mode(Dev#1/Func#2)
+Help String	= Enabled for activate ASPM operations of PCIe in OS.
+Token	=32	// Do NOT change this line
+Offset	=43
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]L0s Entry
+         [02]L1 Entry
+         [03]L0s And L1 Entry
+         [FF]Auto
+
+Setup Question	=   ASPM Mode(Dev#2/Func#1)
+Help String	= Enabled for activate ASPM operations of PCIe in OS.
+Token	=35	// Do NOT change this line
+Offset	=46
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]L0s Entry
+         [02]L1 Entry
+         [03]L0s And L1 Entry
+         [FF]Auto
+
+Setup Question	=   ASPM Mode(Dev#2/Func#2)
+Help String	= Enabled for activate ASPM operations of PCIe in OS.
+Token	=38	// Do NOT change this line
+Offset	=49
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]L0s Entry
+         [02]L1 Entry
+         [03]L0s And L1 Entry
+         [FF]Auto
+
+Setup Question	=   ASPM Mode(Dev#3/Func#1)
+Help String	= Enabled for activate ASPM operations of PCIe in OS.
+Token	=3B	// Do NOT change this line
+Offset	=4C
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]L0s Entry
+         [02]L1 Entry
+         [03]L0s And L1 Entry
+         [FF]Auto
+
+Setup Question	= PCIe Power Management Features
+Help String	= No help string
+Token	=178	// Do NOT change this line
+Offset	=1CA
+Width	=01
+BIOS Default	=[0F]Auto 
+Options	=*[00]Disable	// Move "*" to the desired Option
+         [01]Enable
+         [0F]Auto
+
+Setup Question	= I3C/I2C 0 Enable
+Help String	= //E7E51AMSI1A23_002
+Token	=F6	// Do NOT change this line
+Offset	=4D
+Width	=01
+BIOS Default	=[02]I2C Enabled 
+Options	=*[00]Both Disabled	// Move "*" to the desired Option
+         [01]I3C Enabled
+         [02]I2C Enabled
+         [0F]Auto
+
+Setup Question	= I3C/I2C 1 Enable
+Help String	= No help string
+Token	=F8	// Do NOT change this line
+Offset	=4F
+Width	=01
+BIOS Default	=[0F]Auto 
+Options	=*[00]Both Disabled	// Move "*" to the desired Option
+         [01]I3C Enabled
+         [02]I2C Enabled
+         [0F]Auto
+
+Setup Question	= I3C/I2C 2 Enable
+Help String	= No help string
+Token	=FA	// Do NOT change this line
+Offset	=51
+Width	=01
+BIOS Default	=[0F]Auto 
+Options	=*[00]Both Disabled	// Move "*" to the desired Option
+         [01]I3C Enabled
+         [02]I2C Enabled
+         [0F]Auto
+
+Setup Question	= I3C/I2C 3 Enable
+Help String	= No help string
+Token	=FC	// Do NOT change this line
+Offset	=53
+Width	=01
+BIOS Default	=[0F]Auto 
+Options	=*[00]Both Disabled	// Move "*" to the desired Option
+         [01]I3C Enabled
+         [02]I2C Enabled
+         [0F]Auto
+
+Setup Question	= System Power Fault Protection
+Help String	= Enables or disables the system to boot up when detecting abnormal voltage input. When enabled, it can protect the system from unexpected operating and remain shut down status.
+Token	=17A	// Do NOT change this line
+Offset	=726
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+// Setup Question	= PSS Support
+// Help String	= Enable/disable the generation of ACPI _PPC, _PSS, and _PCT objects.
+// Token	=1DE	// Do NOT change this line
+// Offset	=184
+// Width	=01
+// BIOS Default	=[01]Enabled 
+// Options	=*[00]Disabled	// Move "*" to the desired Option
+//         [01]Enabled
+
+Setup Question	= PSS Support
+Help String	= Enable/disable the generation of ACPI _PPC, _PSS, and _PCT objects.
+Token	=47	// Do NOT change this line
+Offset	=184
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= PCIe ARI Support
+Help String	= Enable/Disable ARI
+Token	=2D07	// Do NOT change this line
+Offset	=622
+Width	=01
+BIOS Default	=[0F]Auto 
+Options	=[0F]Auto	// Move "*" to the desired Option
+         *[00]Disabled
+         [01]Enabled
+
+Setup Question	= PCIe ARI Support
+Help String	= Enable/Disable ARI
+Token	=2C40	// Do NOT change this line
+Offset	=418
+Width	=01
+BIOS Default	=[0F]Auto 
+Options	=[0F]Auto	// Move "*" to the desired Option
+         *[00]Disabled
+         [01]Enabled
+
+Setup Question	= PCIe ARI Support
+Help String	= Enable/Disable ARI
+Token	=E1	// Do NOT change this line
+Offset	=41
+Width	=01
+BIOS Default	=[0F]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [0F]Auto
+
+Setup Question	= PCIe ARI Enumeration
+Help String	= ARI Forwarding Enable for each downstream port
+Token	=2D08	// Do NOT change this line
+Offset	=623
+Width	=01
+BIOS Default	=[0F]Auto 
+Options	=[0F]Auto	// Move "*" to the desired Option
+         *[00]Disabled
+         [01]Enabled
+
+Setup Question	= PCIe ARI Enumeration
+Help String	= ARI Forwarding Enable for each downstream port
+Token	=2C41	// Do NOT change this line
+Offset	=419
+Width	=01
+BIOS Default	=[0F]Auto 
+Options	=[0F]Auto	// Move "*" to the desired Option
+         *[00]Disabled
+         [01]Enabled
+
+Setup Question	= PCIe ARI Enumeration
+Help String	= ARI Forwarding Enable for each downstream port
+Token	=E4	// Do NOT change this line
+Offset	=42
+Width	=01
+BIOS Default	=[0F]Auto 
+Options	=*[00]Disable	// Move "*" to the desired Option
+         [01]Enable
+         [0F]Auto
+
+Setup Question	= STAPM
+Help String	= Enables or disables STAPM fucntion.
+Token	=1F4	// Do NOT change this line
+Offset	=4A8
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=[FF]Auto	// Move "*" to the desired Option
+         *[00]Disabled
+         [01]Enabled
+
+Setup Question	= Advanced Error Reporting (AER)
+Help String	= Enable/Disable support for Advanced Error Reporting (AER)
+Token	=E3	// Do NOT change this line
+Offset	=2D6
+Width	=01
+BIOS Default	=[0F]Auto 
+Options	=*[00]Not Supported	// Move "*" to the desired Option
+         [01]Supported
+         [0F]Auto
+
+Setup Question	=   PME Turn Off Support
+Help String	= Enable to support sending PME_Turn_Off message to Discrete GPU when going to D3Cold
+Token	=36	// Do NOT change this line
+Offset	=2C
+Width	=01
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled 
+
+Setup Question	= CPPC Dynamic Preferred Cores
+Help String	= No help string
+Token	=7049	// Do NOT change this line
+Offset	=2D9
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=[00]Frequency	// Move "*" to the desired Option
+         *[01]Cache
+         [02]Driver
+         [FF]Auto
+
+Setup Question	= CPPC Dynamic Preferred Cores
+Help String	= No help string
+Token	=2D0A	// Do NOT change this line
+Offset	=6EB
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=[FF]Auto	// Move "*" to the desired Option
+         [00]Frequency
+         *[01]Cache
+         [02]Driver
+
+Setup Question	= Relaxed Ordering
+Help String	= Enables or Disables PCI Express Device Relaxed Ordering.
+Token	=61	// Do NOT change this line
+Offset	=1AF
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=[00]Disabled	// Move "*" to the desired Option
+         *[01]Enabled
+
+Setup Question	=   USB Support
+Help String	= If Enabled, USB devices will not be available until after OS boot. If Disable, USB device will be available before OS boot.
+Token	=C1	// Do NOT change this line
+Offset	=04
+Width	=01
+BIOS Default	=[01]Full Initial 
+Options	=[00]Disabled	// Move "*" to the desired Option
+         *[01]Full Initial
+         [02]Partial Initial
+
+Setup Question	= L1 Stream HW Prefetcher
+Help String	= Option to Enable | Disable L1 Stream HW Prefetcher
+Token	=2E	// Do NOT change this line
+Offset	=21
+Width	=01
+BIOS Default	=[03]Auto 
+Options	=[00]Disable	// Move "*" to the desired Option
+         *[01]Enable
+         [03]Auto
+
+Setup Question	= Memory interleaving
+Help String	= Allows for disabling memory channel interleaving.
+Token	=3E	// Do NOT change this line
+Offset	=36
+Width	=01
+BIOS Default	=[07]Auto 
+Options	=[00]Disabled	// Move "*" to the desired Option
+         *[01]Enabled
+         [07]Auto
+
+Setup Question	= L2 Stream HW Prefetcher
+Help String	= Option to Enable | Disable L2 Stream HW Prefetcher
+Token	=2F	// Do NOT change this line
+Offset	=22
+Width	=01
+BIOS Default	=[03]Auto 
+Options	=[00]Disable	// Move "*" to the desired Option
+         *[01]Enable
+         [03]Auto
+
+Setup Question	= L1 Stride Prefetcher
+Help String	= Uses memory access history of individual instructions to fetch additional lines when each access is a constant distance from the previous.
+Token	=30	// Do NOT change this line
+Offset	=AF
+Width	=01
+BIOS Default	=[03]Auto 
+Options	=[00]Disable	// Move "*" to the desired Option
+         *[01]Enable
+         [03]Auto
+
+Setup Question	= L1 Region Prefetcher
+Help String	= Uses memory access history to fetch additional lines when the data access for a given instruction tends to be followed by other data accesses.
+Token	=31	// Do NOT change this line
+Offset	=B0
+Width	=01
+BIOS Default	=[03]Auto 
+Options	=[00]Disable	// Move "*" to the desired Option
+         *[01]Enable
+         [03]Auto
+
+Setup Question	= L1 Burst Prefetch Mode
+Help String	= Option to Enable | Disable L1 Burst Prefetch Mode
+Token	=32	// Do NOT change this line
+Offset	=369
+Width	=01
+BIOS Default	=[03]Auto 
+Options	=[00]Disable	// Move "*" to the desired Option
+         *[01]Enable
+         [03]Auto
+
+Setup Question	= L2 Up/Down Prefetcher
+Help String	= Uses memory access history to determine whether to fetch the next or previous line for all memory accesses.
+Token	=33	// Do NOT change this line
+Offset	=B1
+Width	=01
+BIOS Default	=[03]Auto 
+Options	=[00]Disable	// Move "*" to the desired Option
+         *[01]Enable
+         [03]Auto
+
+Setup Question	= Power Supply Idle Control
+Help String	= Power Supply Idle Control.
+Token	=2CB9	// Do NOT change this line
+Offset	=4F3
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=[FF]Auto	// Move "*" to the desired Option
+         [01]Low Current Idle
+         *[00]Typical Current Idle
+
+Setup Question	= Power Supply Idle Control
+Help String	= Power Supply Idle Control.
+Token	=12	// Do NOT change this line
+Offset	=2DE
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=[01]Low Current Idle	// Move "*" to the desired Option
+         *[00]Typical Current Idle
+         [FF]Auto
+
+Setup Question	= CPU Speculative Store Modes
+Help String	= Balanced:  Store instructions may delay sending out their invalidations to remote cacheline copies when the cacheline is present but not in a writable state in the local cache.    More Speculative:  Store instructions will send out invalidations to remote cacheline copies as soon as possible.    Less Speculative:  Store instructions may delay sending out their invalidations to remote cacheline copies when the cacheline is not present in the local cache or not in a writable state in the local cache.
+Token	=29	// Do NOT change this line
+Offset	=376
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=[FF]Auto	// Move "*" to the desired Option
+         [00]Blanced
+         *[01]More Speculative
+         [02]Less Speculative
+
+Setup Question	= ACPI SRAT L3 Cache As NUMA Domain
+Help String	= Enabled: Each CCX in the system will be declared as a separate NUMA domain.  Disabled: Memory Addressing \ NUMA nodes per socket will be declared.
+Token	=42	// Do NOT change this line
+Offset	=1C6
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=[00]Disabled	// Move "*" to the desired Option
+         *[01]Enabled
+         [FF]Auto
+
+Setup Question	= ACPI SRAT L3 Cache As NUMA Domain
+Help String	= Enabled: Each CCX in the system will be declared as a separate NUMA domain.  Disabled: Memory Addressing \ NUMA nodes per socket will be declared.
+Token	=2D02	// Do NOT change this line
+Offset	=61D
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=[FF]Auto	// Move "*" to the desired Option
+         [00]Disabled
+         *[01]Enabled
+
+Setup Question	= Extended Synch
+Help String	= If ENABLED allows generation of Extended Synchronization patterns.
+Token	=67	// Do NOT change this line
+Offset	=1B5
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=[00]Disabled	// Move "*" to the desired Option
+         *[01]Enabled
+
+
+
