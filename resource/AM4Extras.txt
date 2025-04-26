@@ -2,6 +2,8 @@ Here is a list of additional settings that can be changed in bios if desired.
 =============================================================================
         * These settings were not added due to various reasons *
 
+** AM4 Version **
+
 *****************************
 Created By Yuki (YukiWasTake)  
 *****************************
