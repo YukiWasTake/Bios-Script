@@ -1,5 +1,5 @@
 // Script File Name : IntelBios.txt
-HIICrc32=
+
 
 Setup Question	= Native ASPM
 Help String	= Enabled - OS Controlled ASPM, Disabled - BIOS Controlled ASPM
