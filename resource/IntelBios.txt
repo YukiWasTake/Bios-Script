@@ -1,2 +1,1100 @@
 // Script File Name : IntelBios.txt
 HIICrc32=
+
+Setup Question	= Native ASPM
+Help String	= Enabled - OS Controlled ASPM, Disabled - BIOS Controlled ASPM
+Token	=10A	// Do NOT change this line
+Offset	=32
+Width	=01
+BIOS Default	=[02]Auto 
+Options	=[02]Auto	// Move "*" to the desired Option
+         [01]Enabled
+         *[00]Disabled
+
+Setup Question	= ACPI Debug
+Help String	= Open a memory buffer for storing debug strings. Reenter SETUP after enabling to see the buffer address. Use method ADBG to write strings to buffer.
+Token	=10D	// Do NOT change this line
+Offset	=34
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= PUIS Enable
+Help String	= Enable/Disable Power-Up In Standby (PUIS) feature set allows devices to be powered-up into the Standby power management state to minimize inrush current at power-up and to allow the host to sequence the spin-up of devices.   
+Token	=10F	// Do NOT change this line
+Offset	=86E
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=[01]Enabled	// Move "*" to the desired Option
+         *[00]Disabled
+
+Setup Question	= EC Notification
+Help String	= Sends EC notification of Low Power S0 Idle State
+Token	=110	// Do NOT change this line
+Offset	=51
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= EC CS Debug Light
+Help String	= When EC enters Low Power S0 Idle State, the CAPS LOCK light will be turned on
+Token	=2718	// Do NOT change this line
+Offset	=52
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= EC Low Power Mode
+Help String	= This option controls whether EC will go to Low power mode during Low Power S0 Idle State
+Token	=111	// Do NOT change this line
+Offset	=53
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= Sensor Standby
+Help String	= Enable/Disable Sensor standby mode
+Token	=112	// Do NOT change this line
+Offset	=58
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= CS PL1 Limit
+Help String	= Limit PL1 (Power Limit 1) while in Connected Standby
+Token	=113	// Do NOT change this line
+Offset	=59
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= PCI Delay Optimization
+Help String	= Experimental ACPI additions for FW latency optimizations
+Token	=39	// Do NOT change this line
+Offset	=39
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=[00]Disabled	// Move "*" to the desired Option
+         *[01]Enabled
+
+Setup Question	= MSI enabled
+Help String	= When disabled, MSI support is disabled in FADT
+Token	=3A	// Do NOT change this line
+Offset	=7A6
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=[00]Disabled	// Move "*" to the desired Option
+         *[01]Enabled
+
+Setup Question	= C6DRAM
+Help String	= Enable/Disable moving of DRAM contents to PRM memory when CPU is in C6 state
+Token	=2723	// Do NOT change this line
+Offset	=114
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= Intel Virtualization Tech
+Help String	= When enabled, a VMM can utilize the additional hardware capabilities provided by Vanderpool Technology.
+Token	=2724	// Do NOT change this line
+Offset	=B9
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+// Setup Question	= Intel Virtualization Tech
+// Help String	= Enables or disables Intel Virtualization technology.
+// Token	=145F	// Do NOT change this line
+// Offset	=B9
+// Width	=01
+// BIOS Default	=[01]Enabled 
+// Options	=*[00]Disabled	// Move "*" to the desired Option
+//         [01]Enabled
+
+Setup Question	= BIST
+Help String	= Enable/Disable BIST (Built-In Self Test) on reset
+Token	=1C9	// Do NOT change this line
+Offset	=07
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= PECI
+Help String	= Enable/Disable PECI
+Token	=1C4	// Do NOT change this line
+Offset	=04
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= AP threads Idle Manner
+Help String	= AP threads Idle Manner for waiting signal to run
+Token	=1CA	// Do NOT change this line
+Offset	=120
+Width	=01
+BIOS Default	=[02]MWAIT Loop 
+Options	=[01]HALT Loop	// Move "*" to the desired Option
+         [02]MWAIT Loop
+         *[03]RUN Loop
+
+Setup Question	= Intel(R) Speed Shift Technology Interrupt Control
+Help String	= Enable/Disable Intel(R) Speed Shift Technology Interrupts
+Token	=1DA	// Do NOT change this line
+Offset	=20C
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= Boot performance mode
+Help String	= Select the performance state that the BIOS will set starting from reset vector.
+Token	=2729	// Do NOT change this line
+Offset	=13
+Width	=01
+BIOS Default	=[01]Max Non-Turbo Performance 
+Options	=[00]Max Battery	// Move "*" to the desired Option
+         [01]Max Non-Turbo Performance
+         *[02]Turbo Performance
+
+Setup Question	= EIST
+Help String	= Allows more than two frequency ranges to be supported.
+Token	=272A	// Do NOT change this line
+Offset	=09
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= Race To Halt (RTH)
+Help String	= Enable/Disable Race To Halt feature. RTH will dynamically increase CPU frequency in order to enter pkg C-State faster to reduce overall power. (RTH is controlled through MSR 1FC bit 20)
+Token	=1DB	// Do NOT change this line
+Offset	=0A
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= Intel Speed Shift Technology
+Help String	= Enable/Disable Intel(R) Speed Shift Technology support. Enabling will expose the CPPC v2 interface to allow for hardware controlled P-states.
+Token	=1DC	// Do NOT change this line
+Offset	=0B
+Width	=01
+BIOS Default	=[02]Auto 
+Options	=[02]Auto	// Move "*" to the desired Option
+         [01]Enabled
+         *[00]Disabled
+
+// Setup Question	= Intel Speed Shift Technology
+// Help String	= Enables or disables the Intel Speed Shift Technology.
+// Token	=14A8	// Do NOT change this line
+// Offset	=0B
+// Width	=01
+// BIOS Default	=[02]Auto 
+// Options	=[02]Auto	// Move "*" to the desired Option
+//         *[00]Disabled
+//         [01]Enabled
+
+Setup Question	= Intel C-State
+Help String	= Enable/Disable CPU Power Management. Allows CPU to go to C states when it's not 100% utilized.
+Token	=1F0	// Do NOT change this line
+Offset	=14
+Width	=01
+BIOS Default	=[02]Auto 
+Options	=[02]Auto	// Move "*" to the desired Option
+         [01]Enabled
+         *[00]Disabled
+
+// Setup Question	= Intel C-State
+// Help String	= C-state is a processor power management technology defined by ACPI.
+// Token	=14A5	// Do NOT change this line
+// Offset	=14
+// Width	=01
+// BIOS Default	=[02]Auto 
+// Options	=[02]Auto	// Move "*" to the desired Option
+//         *[00]Disabled
+//         [01]Enabled
+
+Setup Question	= C1E Support
+Help String	= Enable/Disable C1E. When enabled, CPU will switch to minimum speed when all cores enter C-State.
+Token	=1F1	// Do NOT change this line
+Offset	=15
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+// Setup Question	= C1E Support
+// Help String	= Enables or disables the C1E function for power-saving in halt state.
+// Token	=14A6	// Do NOT change this line
+// Offset	=15
+// Width	=01
+// BIOS Default	=[00]Disabled 
+// Options	=*[00]Disabled	// Move "*" to the desired Option
+//         [01]Enabled
+
+Setup Question	=   C-State Auto Demotion
+Help String	= Configure C-State Auto Demotion
+Token	=1F2	// Do NOT change this line
+Offset	=3E
+Width	=01
+BIOS Default	=[01]C1 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]C1
+
+Setup Question	=   C-State Un-demotion
+Help String	= Configure C-State Un-demotion
+Token	=1F3	// Do NOT change this line
+Offset	=3F
+Width	=01
+BIOS Default	=[01]C1 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]C1
+
+Setup Question	=   Package C-State Demotion
+Help String	=   Package C-State Demotion
+Token	=1F4	// Do NOT change this line
+Offset	=40
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	=   Package C-State Un-demotion
+Help String	=   Package C-State Un-demotion
+Token	=1F5	// Do NOT change this line
+Offset	=41
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= CState Pre-Wake
+Help String	= Disable - Sets bit 30 of POWER_CTL MSR(0x1FC) to 1 to disable the Cstate Pre-Wake
+Token	=1F6	// Do NOT change this line
+Offset	=3D
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= Package C State Limit
+Help String	= Maximum Package C State Limit Setting. Cpu Default: Leaves to Factory default value.Auto: Initializes to deepest available Package C State Limit.
+Token	=1F8	// Do NOT change this line
+Offset	=4B
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[00]C0/C1	// Move "*" to the desired Option
+         [01]C2
+         [02]C3
+         [03]C6
+         [04]C7
+         [05]C7S
+         [06]C8
+         [07]C9
+         [08]C10
+         [FE]Cpu Default
+         [FF]Auto
+
+// Setup Question	= Package C State Limit
+// Help String	= This item allows you to select a CPU C-state mode for power-saving when system is idle.
+// Token	=14A7	// Do NOT change this line
+// Offset	=4B
+// Width	=01
+// BIOS Default	=[FF]Auto 
+// Options	=*[00]C0	// Move "*" to the desired Option
+//         [01]C2
+//         [02]C3
+//         [03]C6
+//         [04]C7
+//         [05]C7s
+//         [06]C8
+//         [07]C9
+//         [08]C10
+//         [FF]Auto
+
+Setup Question	= Interrupt Redirection Mode Selection
+Help String	= Interrupt Redirection Mode Select for Logical Interrupts 
+Token	=204	// Do NOT change this line
+Offset	=49
+Width	=01
+BIOS Default	=[00]Fixed Priority 
+Options	=[00]Fixed Priority	// Move "*" to the desired Option
+         *[01]Round robin
+         [02]Hash Vector
+         [07]No Change
+
+Setup Question	= Energy Efficient P-state
+Help String	= Enable/Disable Energy Efficient P-state feature. When set to 0, will disable access to ENERGY_PERFORMANCE_BIAS MSR and CPUID Function 6 ECX[3] will read 0 indicating no support for Energy Efficient policy setting. When set to 1 will enable access to ENERGY_PERFORMANCE_BIAS MSR 1B0h and CPUID Function 6 ECX[3] will read 1 indicating Energy Efficient policy setting is supported.
+Token	=24C	// Do NOT change this line
+Offset	=3C
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= Energy Efficient Turbo
+Help String	= Enable/Disable Energy Efficient Turbo Feature. This feature will opportunistically lower the turbo frequency to increase efficiency. Recommended only to disable in overclocking situations where turbo frequency must remain constant. Otherwise, leave enabled.
+Token	=253	// Do NOT change this line
+Offset	=1D5
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= Bi-directional PROCHOT#
+Help String	= When a processor thermal sensor trips (either core), the PROCHOT# will be driven.  If bi-direction is enabled, external agents can drive PROCHOT# to throttle the processor.
+Token	=2F2	// Do NOT change this line
+Offset	=7A
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= Disable PROCHOT# Output
+Help String	= Enable/Disable PROCHOT# Output
+Token	=2F3	// Do NOT change this line
+Offset	=7B
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= PROCHOT Response
+Help String	= Enable/Disable PROCHOT Response
+Token	=2F5	// Do NOT change this line
+Offset	=7E
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= PROCHOT Lock 
+Help String	= Enable/Disable PROCHOT Lock
+Token	=2F6	// Do NOT change this line
+Offset	=7D
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= ACPI T-States
+Help String	= Enable/Disable ACPI T-States.
+Token	=2F7	// Do NOT change this line
+Offset	=79
+Width	=01
+BIOS Default	=0 
+Value	=0	// Enabled = 1, Disabled = 0
+
+Setup Question	= Power Loss Notification Feature
+Help String	= Enable/Disable Power Loss Notification Feature
+Token	=335	// Do NOT change this line
+Offset	=A9E
+Width	=01
+BIOS Default	=[02]Default 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [02]Default
+
+Setup Question	= P-state Capping
+Help String	= Set _PPC and send ACPI notification
+Token	=35D	// Do NOT change this line
+Offset	=70E
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= ZPODD
+Help String	= Zero Power ODD option is applicable only for the board with ZPODD support.
+Token	=360	// Do NOT change this line
+Offset	=710
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= TVB Ratio Clipping               Dis
+Help String	= Enable = Core frequency reduction when CPU temperature reaches threshold for processor with Thermal Velocity Boost feature. Disable it to potentially achieve higher frequencies when temperature is high.
+Token	=14BA	// Do NOT change this line
+Offset	=F63
+Width	=01
+BIOS Default	=[00]Auto 
+Options	=[00]Auto	// Move "*" to the desired Option
+         *[01]Disabled
+         [02]Enabled
+
+Setup Question	= Ring Down Bin
+Help String	= Enable/Disable Ring Downbin feature. Enabled - CPU will down bin the ring ratio, which means the requested max ring ratio will not be observed. Disable - CPU will not down bin the ring ratio and the requested ring ratio limit will be observed. Default for Overclocking is "Disabled" to allow for a predictable ring ratio. Uses OC mailbox command 0x19.
+Token	=43C	// Do NOT change this line
+Offset	=1E8
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= LTR
+Help String	= PCIE Latency Reporting Enable/Disable
+Token	=554	// Do NOT change this line
+Offset	=CA
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= JTAG C10 Power Gate
+Help String	= When Enabled, JTAG is power gated in C10 state. When Disabled, keeps the JTAG power up during C10 and deeper power states for debug purpose. 
+Token	=4B4	// Do NOT change this line
+Offset	=08
+Width	=01
+BIOS Default	=[00]Enabled 
+Options	=*[01]Disabled	// Move "*" to the desired Option
+         [00]Enabled
+
+Setup Question	= Above 4G memory/Crypto Currency mining
+Help String	= Enable this item to allow more memory address configuration space (requires 64 bit OS) with other optimized setting for better device compatibility and it might slightly affect the efficiency of PCIe-based device.
+Token	=4E6	// Do NOT change this line
+Offset	=10D9
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=[00]Disabled	// Move "*" to the desired Option
+         *[01]Enabled
+
+Setup Question	= Re-Size BAR Support
+Help String	= If system has Resizable BAR capable PCIe Devices, this option Enables or Disables Resizable BAR Support.
+Token	=4E7	// Do NOT change this line
+Offset	=10DA
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=[00]Disabled	// Move "*" to the desired Option
+         *[01]Enabled
+
+Setup Question	= ASPM
+Help String	= PCI Express Active State Power Management settings.
+Token	=4F3	// Do NOT change this line
+Offset	=10E7
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [37]Auto
+         [01]Force L0s
+
+Setup Question	= LTR Mechanism Enable
+Help String	= If supported by hardware and set to 'Enabled', this enables the Latency Tolerance Reporting (LTR) Mechanism.
+Token	=4FE	// Do NOT change this line
+Offset	=10F4
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= Clock Power Management
+Help String	= If supported by hardware and set to 'Enabled', the device is permitted to use CLKREQ# signal for power management of Link clock in accordance to protocol defined in appropriate form factor specification.
+Token	=501	// Do NOT change this line
+Offset	=10F8
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= USB 2.0 Controller Mode
+Help String	= Configures the USB 2.0 controller in HiSpeed (480Mbps) or FullSpeed (12Mbps).
+Token	=50D	// Do NOT change this line
+Offset	=2E
+Width	=01
+BIOS Default	=[01]HiSpeed 
+Options	=*[01]HiSpeed	// Move "*" to the desired Option
+         [00]FullSpeed
+
+Setup Question	= USB S5 Wakeup Support
+Help String	= Enable/Disable USB S5 Wakeup Support.
+Token	=511	// Do NOT change this line
+Offset	=30
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= DMI Link ASPM Control
+Help String	= The control of Active State Power Management of the DMI Link.
+Token	=A39	// Do NOT change this line
+Offset	=517
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [02]L1
+         [04]Auto
+
+Setup Question	= Tcc Activation Offset
+Help String	= Offset from factory set Tcc activation temprature at which the Thermal Control Circuit must be activated. Tcc will be activated at: Tcc Activation Temp - Tcc Activation Offset. Tcc Activation Offset range is 0 to 63.
+Token	=2EE	// Do NOT change this line
+Offset	=7F
+Width	=01
+BIOS Default	=<0> 
+Value	=<0>
+
+Setup Question	= EPG DIMM Idd3N
+Help String	= Active standby current (Idd3N) in milliamps from datasheet. Must be calculated on a per DIMM basis.
+Token	=20D	// Do NOT change this line
+Offset	=76
+Width	=02
+BIOS Default	=<26> 
+Value	=<0>
+
+Setup Question	= EPG DIMM Idd3P
+Help String	= Active power-down current (Idd3P) in milliamps from datasheet. Must be calculated on a per DIMM basis.
+Token	=20E	// Do NOT change this line
+Offset	=78
+Width	=02
+BIOS Default	=<11> 
+Value	=<0>
+
+Setup Question	= PEG 0 ASPM
+Help String	= PCI Express Active State Power Management settings.
+Token	=116B	// Do NOT change this line
+Offset	=379
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]L0s
+         [02]L1
+         [03]L0sL1
+
+Setup Question	= PEG 1 ASPM
+Help String	= PCI Express Active State Power Management settings.
+Token	=116C	// Do NOT change this line
+Offset	=37A
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]L0s
+         [02]L1
+         [03]L0sL1
+
+Setup Question	= PEG 2 ASPM
+Help String	= PCI Express Active State Power Management settings.
+Token	=116D	// Do NOT change this line
+Offset	=37B
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]L0s
+         [02]L1
+         [03]L0sL1
+
+Setup Question	= RC6(Render Standby)
+Help String	= Check to enable render standby support.
+Token	=2789	// Do NOT change this line
+Offset	=2E
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= DDR PowerDown and idle counter
+Help String	= BIOS: BIOS is in control of DDR CKE mode and idle timer value. PCODE: pcode will manage the modes.
+Token	=6C7	// Do NOT change this line
+Offset	=21F
+Width	=01
+BIOS Default	=[01]BIOS 
+Options	=*[00]PCODE	// Move "*" to the desired Option
+         [01]BIOS
+
+Setup Question	= For LPDDR Only: DDR PowerDown and idle counter
+Help String	= For LPDDR Only: BIOS: BIOS is in control of DDR CKE mode and idle timer value. PCODE: pcode will manage the modes.
+Token	=6C8	// Do NOT change this line
+Offset	=220
+Width	=01
+BIOS Default	=[01]BIOS 
+Options	=*[00]PCODE	// Move "*" to the desired Option
+         [01]BIOS
+
+Setup Question	= PCI Express Clock Gating
+Help String	= PCI Express Clock Gating Enable/Disable for each root port.
+Token	=2793	// Do NOT change this line
+Offset	=2A5
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= PCI Express Power Gating
+Help String	= PCI Express Power Gating Enable/Disable for each root port.
+Token	=984	// Do NOT change this line
+Offset	=2A9
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= L1 Substates
+Help String	= PCI Express L1 Substates settings.L1SS cannot be enabled when CLKREQMSG is disabled
+Token	=2794	// Do NOT change this line
+Offset	=37D
+Width	=01
+BIOS Default	=[02]L1.1 & L1.2 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]L1.1
+         [02]L1.1 & L1.2
+
+Setup Question	= LAN Wake From DeepSx
+Help String	= Wake from DeepSx by the assertion of LAN_WAKE# pin
+Token	=A0E	// Do NOT change this line
+Offset	=05
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=[01]Enabled	// Move "*" to the desired Option
+         *[00]Disabled
+
+Setup Question	=   Wake on LAN Enable
+Help String	= Enable/Disable integrated LAN to wake the system.
+Token	=A0F	// Do NOT change this line
+Offset	=0C
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=[01]Enabled	// Move "*" to the desired Option
+         *[00]Disabled
+
+Setup Question	= Wake on WLAN and BT Enable
+Help String	= Enable/Disable PCI Express Wireless LAN and Bluetooth to wake the system. 
+Token	=A16	// Do NOT change this line
+Offset	=0E
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=[01]Enabled	// Move "*" to the desired Option
+         *[00]Disabled
+
+Setup Question	= DeepSx Wake on WLAN and BT Enable
+Help String	= Enable/Disable PCI Express Wireless LAN and Bluetooth to wake the system from DeepSx. 
+Token	=A17	// Do NOT change this line
+Offset	=0F
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=[01]Enabled	// Move "*" to the desired Option
+         *[00]Disabled
+
+Setup Question	= HPET
+Help String	= Enables or disables the HPET (High Precision Event Timers) support.
+Token	=A19	// Do NOT change this line
+Offset	=1F
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=[00]Disabled	// Move "*" to the desired Option
+         *[01]Enabled
+
+Setup Question	= Legacy IO Low Latency
+Help String	= Set to enable low latency of legacy IO. Some systems require lower IO latency irrespective of power. This is a tradeoff between power and IO latency.
+Token	=27CA	// Do NOT change this line
+Offset	=76F
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=[00]Disabled	// Move "*" to the desired Option
+         *[01]Enabled
+
+Setup Question	= PCH Cross Throttling
+Help String	= Enable/Disable the PCH Cross Throttling feature. Only ULT support this feature.
+Token	=A1D	// Do NOT change this line
+Offset	=6BE
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= Pcie Pll SSC
+Help String	= Pcie Pll SSC percentage.AUTO - Keep hw default, no BIOS override. Range is 0.0%-2.0%.
+Token	=A29	// Do NOT change this line
+Offset	=23
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=[FF]Auto	// Move "*" to the desired Option
+         *[00]0.0%
+         [01]0.1%
+         [02]0.2%
+         [03]0.3%
+         [04]0.4%
+         [05]0.5%
+         [06]0.6%
+         [07]0.7%
+         [08]0.8%
+         [09]0.9%
+         [0A]1.0%
+         [0B]1.1%
+         [0C]1.2%
+         [0D]1.3%
+         [0E]1.4%
+         [0F]1.5%
+         [10]1.6%
+         [11]1.7%
+         [12]1.8%
+         [13]1.9%
+         [14]2.0%
+         [FE]Disable
+
+Setup Question	= Enable 8254 Clock Gate
+Help String	= Enables/Disables 8254 clock gate in early phase. Set 8254CGE is necessary for SLP_S0 support. Platform is albe to disable this policy and set 8254CGE in late phase.
+Token	=A2B	// Do NOT change this line
+Offset	=6BD
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+         [02]Enabled In Runtime and S3 Resume
+
+Setup Question	= Aggressive LPM Support
+Help String	= Enable PCH to aggressively enter link power state.
+Token	=A7F	// Do NOT change this line
+Offset	=92
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=[01]Enabled	// Move "*" to the desired Option
+         *[00]Disabled
+
+Setup Question	= PCI Express Root Port 1 ASPM
+Help String	= PCI Express Active State Power Management settings.
+Token	=B01	// Do NOT change this line
+Offset	=11B
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [02]L1
+         [04]Auto
+
+Setup Question	= PCI Express Root Port 2 ASPM
+Help String	= PCI Express Active State Power Management settings.
+Token	=B22	// Do NOT change this line
+Offset	=11C
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [02]L1
+         [04]Auto
+
+Setup Question	= PCI Express Root Port 3 ASPM
+Help String	= PCI Express Active State Power Management settings.
+Token	=B43	// Do NOT change this line
+Offset	=11D
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [02]L1
+         [04]Auto
+
+Setup Question	= PCI Express Root Port 4 ASPM
+Help String	= PCI Express Active State Power Management settings.
+Token	=B64	// Do NOT change this line
+Offset	=11E
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]L0s
+         [02]L1
+         [04]Auto
+
+Setup Question	= PCI Express Root Port 5 ASPM
+Help String	= PCI Express Active State Power Management settings.
+Token	=B85	// Do NOT change this line
+Offset	=11F
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [02]L1
+         [04]Auto
+
+Setup Question	= PCI Express Root Port 6 ASPM
+Help String	= PCI Express Active State Power Management settings.
+Token	=BA6	// Do NOT change this line
+Offset	=120
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [02]L1
+         [04]Auto
+
+Setup Question	= PCI Express Root Port 7 ASPM
+Help String	= PCI Express Active State Power Management settings.
+Token	=BC7	// Do NOT change this line
+Offset	=121
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [02]L1
+         [04]Auto
+
+Setup Question	= PCI Express Root Port 8 ASPM
+Help String	= PCI Express Active State Power Management settings.
+Token	=BE8	// Do NOT change this line
+Offset	=122
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [02]L1
+         [04]Auto
+
+Setup Question	= PCI Express Root Port 9 ASPM
+Help String	= PCI Express Active State Power Management settings.
+Token	=C09	// Do NOT change this line
+Offset	=123
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [02]L1
+         [04]Auto
+
+Setup Question	= PCI Express Root Port 10 ASPM
+Help String	= PCI Express Active State Power Management settings.
+Token	=C2A	// Do NOT change this line
+Offset	=124
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [02]L1
+         [04]Auto
+
+Setup Question	= PCI Express Root Port 11 ASPM
+Help String	= PCI Express Active State Power Management settings.
+Token	=C4B	// Do NOT change this line
+Offset	=125
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [02]L1
+         [04]Auto
+
+Setup Question	= PCI Express Root Port 12 ASPM
+Help String	= PCI Express Active State Power Management settings.
+Token	=C6C	// Do NOT change this line
+Offset	=126
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [02]L1
+         [04]Auto
+
+Setup Question	= PCI Express Root Port 13 ASPM
+Help String	= PCI Express Active State Power Management settings.
+Token	=C8D	// Do NOT change this line
+Offset	=127
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [02]L1
+         [04]Auto
+
+Setup Question	= PCI Express Root Port 14 ASPM
+Help String	= PCI Express Active State Power Management settings.
+Token	=CAE	// Do NOT change this line
+Offset	=128
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [02]L1
+         [04]Auto
+
+Setup Question	= PCI Express Root Port 15 ASPM
+Help String	= PCI Express Active State Power Management settings.
+Token	=CCF	// Do NOT change this line
+Offset	=129
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [02]L1
+         [04]Auto
+
+Setup Question	= PCI Express Root Port 16 ASPM
+Help String	= PCI Express Active State Power Management settings.
+Token	=CF0	// Do NOT change this line
+Offset	=12A
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [02]L1
+         [04]Auto
+
+Setup Question	= PCI Express Root Port 17 ASPM
+Help String	= PCI Express Active State Power Management settings.
+Token	=D11	// Do NOT change this line
+Offset	=12B
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [02]L1
+         [04]Auto
+
+Setup Question	= PCI Express Root Port 18 ASPM
+Help String	= PCI Express Active State Power Management settings.
+Token	=D32	// Do NOT change this line
+Offset	=12C
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [02]L1
+         [04]Auto
+
+Setup Question	= PCI Express Root Port 19 ASPM
+Help String	= PCI Express Active State Power Management settings.
+Token	=D53	// Do NOT change this line
+Offset	=12D
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [02]L1
+         [04]Auto
+
+Setup Question	= PCI Express Root Port 20 ASPM
+Help String	= PCI Express Active State Power Management settings.
+Token	=D74	// Do NOT change this line
+Offset	=12E
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [02]L1
+         [04]Auto
+
+Setup Question	= PCI Express Root Port 21 ASPM
+Help String	= PCI Express Active State Power Management settings.
+Token	=D95	// Do NOT change this line
+Offset	=12F
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [02]L1
+         [04]Auto
+
+Setup Question	= PCI Express Root Port 22 ASPM
+Help String	= PCI Express Active State Power Management settings.
+Token	=DB6	// Do NOT change this line
+Offset	=130
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [02]L1
+         [04]Auto
+
+Setup Question	= PCI Express Root Port 23 ASPM
+Help String	= PCI Express Active State Power Management settings.
+Token	=DD7	// Do NOT change this line
+Offset	=131
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [02]L1
+         [04]Auto
+
+Setup Question	= PCI Express Root Port 24 ASPM
+Help String	= PCI Express Active State Power Management settings.
+Token	=DF8	// Do NOT change this line
+Offset	=132
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [02]L1
+         [04]Auto
+
+Setup Question	= USB Standby Power at S4/S5
+Help String	= Set Enabled to allow standby power on all USB ports. Allowing to be adjusted manually when Resume By   USB Device was set as Disabled
+Token	=11BA	// Do NOT change this line
+Offset	=13CD
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
+
+Setup Question	= Power Down Mode
+Help String	= Set Power Down Mode item.
+Token	=1326	// Do NOT change this line
+Offset	=F20
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]APD
+         [02]PPD
+         [06]PPD DLL Off
+         [FF]Auto
+
+Setup Question	= Power Down Mode
+Help String	= CKE Power Down Mode Control
+Token	=276C	// Do NOT change this line
+Offset	=1A2
+Width	=01
+BIOS Default	=[FF]Auto 
+Options	=[FF]Auto	// Move "*" to the desired Option
+         *[00]No Power Down
+         [01]APD
+         [06]PPD-DLLoff
+
+// Setup Question	= Intel VT-D Tech
+// Help String	= Enables or disables Intel VT-D technology.
+// Token	=297F	// Do NOT change this line
+// Offset	=7D
+// Width	=01
+// BIOS Default	=[01]Enabled 
+// Options	=*[00]Disabled	// Move "*" to the desired Option
+//         [01]Enabled
+
+Setup Question	= Intel VT-D Tech
+Help String	= VT-d capability
+Token	=276F	// Do NOT change this line
+Offset	=7D
+Width	=01
+BIOS Default	=[01]Enabled 
+Options	=[01]Enabled	// Move "*" to the desired Option
+         *[00]Disabled
+
+Setup Question	= Thermal Throttling Level
+Help String	= Determine if use Intel suggested setting
+Token	=100C	// Do NOT change this line
+Offset	=717
+Width	=01
+BIOS Default	=[01]Suggested Setting 
+Options	=[01]Suggested Setting	// Move "*" to the desired Option
+         *[00]Manual
+
+Setup Question	= T0 Level
+Help String	= If Trip Point Temperature <= T0Level, the system is in T0 state
+Token	=1010	// Do NOT change this line
+Offset	=718
+Width	=02
+BIOS Default	=<0> 
+Value	=<0>
+
+Setup Question	= T1 Level
+Help String	= If T1Level >= Trip Point Temperature > T0Level, the system is in T1 state
+Token	=1011	// Do NOT change this line
+Offset	=71A
+Width	=02
+BIOS Default	=<0> 
+Value	=<0>
+
+Setup Question	= T2 Level
+Help String	= If T2Level >= Trip Point Temperature > T1Level, the system is in T2 state
+Token	=1012	// Do NOT change this line
+Offset	=71C
+Width	=02
+BIOS Default	=<0> 
+Value	=<0>
+
+Setup Question	= Enable Hibernation
+Help String	= Enables or Disables System ability to Hibernate (OS/S4 Sleep State). This option may not be effective with some operating systems.
+Token	=4D3	// Do NOT change this line
+Offset	=BD0
+Width	=01
+BIOS Default	=1 
+Value	=0	// Enabled = 1, Disabled = 0
+
+Setup Question	=   Advanced Error Reporting
+Help String	= Advanced Error Reporting Enable/Disable.
+Token	=995	// Do NOT change this line
+Offset	=341
+Width	=01
+BIOS Default	=[00]Disabled 
+Options	=*[00]Disabled	// Move "*" to the desired Option
+         [01]Enabled
