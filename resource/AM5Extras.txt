@@ -1,1 +1,67 @@
+Here is a list of additional settings that can be changed in bios if desired.
+=============================================================================
+        * These settings were not added due to various reasons *
 
+** AM5 Version **
+
+*****************************
+Created By Yuki (YukiWasTake)  
+*****************************
+
+-------------
+Miscellaneous
+-------------
++ Disable TPM If it's not required for the games you play, Valorant is pretty much one of the only cases that I know of where it's required. (TPM can be bypassed on Windows 11 anyway so not sure why it wouldn't be bypassed if unneeded).
++ Disable RGB if possible, causes unnecessary heat & power draw.
++ Ensure CPU fan & AIO are running at 100%.
+
+--------------
+PCI Sub-System
+--------------
++ Re-Size Bar Support - Enable.
++ Above 4G memory/Crypto Currency mining - Usually will automatically enable with Re-Size Bar.
++ PCI_Ex Gen Switch - Set to highest gen.
++ Chipset Gen Switch - Set to highest gen.
+
+-------------
+ACPI Settings
+-------------
++ CPU Over Temperature Alert - Disable.
+
+----------------------
+Integrated Peripherals
+----------------------
++ VGA Detection - Disable/Ignore if you don't use integrated graphics.
++ On-Board WI-FI Module Control - Wifi/BT Disable if you don't use.
++ HD Audio Controller - Disable if you don't use the audio jack for your headphones on motherboard (if your headset is USB then you can disable).
+
+-----------------
+USB Configuration
+-----------------
++ XHCI Hand-Off: Disable - Setting to enable allows the OS to handle USB 3.0 controller (disabled is better in most cases).
++ Legacy USB Support: Optional - Makes your keyboard and mouse compatible with PS2. Can be disabled, but needs to be enabled when attempting to boot media (ISO File).
+
+----------------
+Serial IO Config
+----------------
++ Serial (COM) Port 0 Configuration: Disable - 99% of people don't need this.
+
+**********************************************************************************
+                                     OC Menu
+**********************************************************************************
+
++ OC Explore Mode - If unfamiliar with overclocking, use Game Boost or Creator Genie function. Otherwise use expert.
+----------------
+AMD Overclocking
+----------------
++ Precision Boost Overdrive: Auto - unless your CPU supports max boost clock override in which case set to +200 in advanced or if applying negative offset through Curve Optimizer.
+LN2 Mode - Disable.
+
+---
+RAM
+---
++ Either use A-XMP or EXPO depending on what your motherboard has, unless manually overclocked.
+
+*********************************************************************************************************************
+Unfortunately this is all I have for AM5 since I am not on AM5 so I can't verify the optimal values for all settings.
+*********************************************************************************************************************
